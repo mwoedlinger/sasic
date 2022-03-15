@@ -1,0 +1,5 @@
+experiments/*
+*.ipynb
+*.log
+.ipynb_checkpoints
+*.pyc
