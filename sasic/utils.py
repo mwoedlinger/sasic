@@ -1,6 +1,4 @@
 import torch
-import torch.nn as nn
-from collections import defaultdict
 from torch.autograd import Function
 import torch
 import torch.nn.functional as F
@@ -88,33 +86,6 @@ class Dict(dict):
     def __setattr__(self, key, value):
         return self.__setitem__(key, value)
 
-class MinimalCrop:
-	"""
-	Performs the minimal crop such that height and width are both divisible by min_div.
-	"""
-	
-	def __init__(self, min_div=16):
-		self.min_div = min_div
-		
-	def __call__(self, image):
-		w, h = image.size
-		
-		h_new = h - (h % self.min_div)
-		w_new = w - (w % self.min_div)
-		
-		if h_new == 0 and w_new == 0:
-			return image
-		else:    
-			h_diff = h-h_new
-			w_diff = w-w_new
-
-			top = int(h_diff/2)
-			bottom = h_diff-top
-			left = int(w_diff/2)
-			right = w_diff-left
-
-			return image.crop((left, top, w-right, h-bottom))
-
 # class RoundWithSTE(Function):
 #     """ Rounds each element of the input tensor to nearest integer value.
 #     """
@@ -181,7 +152,6 @@ def calc_rate(y_q, mean, scale, sigma_lower_bound=0.1, likelihood_lower_bound=1e
 	else:
 		total_bits = -torch.sum(torch.log2(likelihood), dim=(-1, -2, -3))
 	return total_bits
-
 
 def right_to_left(x_right, shift):
 	out = torch.zeros(x_right.shape).to(x_right.device)

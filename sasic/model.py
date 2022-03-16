@@ -1,26 +1,7 @@
 import torch
 import torch.nn as nn
-import numpy as np
-from skimage import morphology
 from .utils import *
 from .layers import *
-
-class _Residual_Block(nn.Module):
-	def __init__(self):
-		super(_Residual_Block, self).__init__()
-
-		self.conv1 = nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=False)
-		self.in1 = nn.InstanceNorm2d(64, affine=True)
-		self.relu = nn.LeakyReLU(0.2, inplace=True)
-		self.conv2 = nn.Conv2d(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1, bias=False)
-		self.in2 = nn.InstanceNorm2d(64, affine=True)
-
-	def forward(self, x):
-		identity_data = x
-		output = self.relu(self.in1(self.conv1(x)))
-		output = self.in2(self.conv2(output))
-		output = torch.add(output, identity_data)
-		return output
 
 
 class RB(nn.Module):
@@ -33,10 +14,10 @@ class RB(nn.Module):
 			nn.Conv2d(channels, channels, 3, 1, 1, bias=False),
 		)
 	def forward(self, x):
-		out = self.body(x)
-		return out + x
+		return self.body(x) + x
 
-class SAM(nn.Module): # stereo attention block
+
+class SAM(nn.Module):
 	def __init__(self, channels):
 		super(SAM, self).__init__()
 
@@ -46,7 +27,7 @@ class SAM(nn.Module): # stereo attention block
 		self.softmax = nn.Softmax(-1)
 		self.bottleneck = nn.Conv2d(channels * 2+1, channels, 1, 1, 0, bias=True)
 
-	def forward(self, x_left, x_right): # B * C * H * W
+	def forward(self, x_left, x_right):
 		b, c, h, w = x_left.shape
 		buffer_left = self.rb(x_left)
 		buffer_right = self.rb(x_right)
@@ -134,7 +115,8 @@ class EntropyModelRight(nn.Module):
 		rz_loss = calc_rate(z_hat_for_entropy, self.z_loc, self.z_scale)
 
 		# HyperDecoder: z_hat --> entropy parameters
-		z_upscaled = torch.nn.functional.upsample(z_hat_for_decoder, size=y_other_hat.shape[-2:], mode='nearest')
+		z_upscaled = nn.functional.interpolate(z_hat_for_decoder, size=y_other_hat.shape[-2:], mode='nearest')
+
 		dec_in = torch.cat([y_other_hat, z_upscaled], dim=1)
 		entropy_p = self.hyper_decoder(dec_in)
 

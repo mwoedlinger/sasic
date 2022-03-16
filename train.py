@@ -30,12 +30,13 @@ c = Dict(
 
     TRAIN = Dict(
                 name='cityscapes#train',
-                transform=[transforms.RandomCrop((256, 256))],
+                transform=[
+                    CropCityscapesArtefacts(), # cityscapes
+                    transforms.RandomCrop((256, 256))],
                 kwargs={'debug': False}),
     EVAL = Dict(
                 name='cityscapes#eval', 
-                # transform=[MinimalCrop()], 
-                transform=[transforms.CenterCrop((1024, 1024))], 
+                transform=[transforms.CenterCrop((512, 512))], 
                 kwargs={'debug': False})
 )
 ##########################################################################################################################
@@ -173,10 +174,6 @@ def eval_model(eval_loader, model, device, exp_path):
         left = sample['left'].to(device)
         right = sample['right'].to(device)
 
-        ################
-        # Training Phase
-        ################
-
         output = model(left, right, training=False)
         pred_left, pred_right, rate_left, rate_right = output.pred_left, output.pred_right, output.rate_left, output.rate_right
 
@@ -231,8 +228,6 @@ if __name__ == "__main__":
     parser.add_argument('--epochs', default=1000, type=int)
     parser.add_argument('--train', default='instereo2k', 
                         help=f'name of training dataset. Options (includes stero image datasets): {", ".join(list(data_zoo_stereo.keys()))}')
-    parser.add_argument('--generic', action='store_true', 
-                        help='If the program is called with the --generic flag set, the experiment name will be appended with lambda, epochs and training dataset name.')
     args = parser.parse_args()
 
     c.EPOCHS = args.epochs
@@ -245,10 +240,7 @@ if __name__ == "__main__":
     pprint(c)
     print('\n')
 
-    if args.generic:
-        exp_name = args.argv[0] + f'_{c.LMDA}_{c.EPOCHS}_{c.TRAIN.name}'
-    else:
-        exp_name = args.argv[0]
+    exp_name = args.argv[0]
     if len(args.argv) > 2:
         resume = Path(args.argv[2])
     else:

@@ -19,51 +19,14 @@ except IndexError:
 	root = './data'
 
 data_zoo_stereo = {
-	# Stereo
 	'cityscapes': {
 		'train': root / Path('cityscapes_stereo/train'),
 		'eval': root / Path('cityscapes_stereo/eval'),
 		'test': root / Path('cityscapes_stereo/test')
 	},
-	'flickr': {
-		'train': root / Path('flickr_stereo/train'),
-		'eval': root / Path('flickr_stereo/eval'),
-		'test': root / Path('flickr_stereo/test'),
-	},
-	'cityscapes_left': {
-		'train': root / Path('cityscapes_stereo/train'),
-		'eval': root / Path('cityscapes_stereo/eval'),
-		'test': root / Path('cityscapes_stereo/test')
-	},
-	'flickr_left': {
-		'train': root / Path('flickr_stereo/train'),
-		'eval': root / Path('flickr_stereo/eval'),
-		'test': root / Path('flickr_stereo/test'),
-	},
-	'holopix': {
-		'train': root / Path('holopix_stereo/train'),
-		'eval': root / Path('holopix_stereo/eval'),
-		'test': root / Path('holopix_stereo/test'),
-	},
-	'kitti': {
-		'train': root / Path('kitti/training'),
-		'test': root / Path('kitti/testing')
-	},
-	'kitti_hesic': {
-		'train': root / Path('kitti/train'),
-		'test': root / Path('kitti/test')
-	},
 	'instereo2k': {
 		'train': root / Path('instereo2k/train'),
 		'test': root / Path('instereo2k/test'),
-	},
-	'monkaa_finalpass': {
-		'train': root / Path('scene_flow/monkaa_finalpass/train'),
-		'eval': root / Path('scene_flow/monkaa_finalpass/eval')
-	},
-	'monkaa_cleanpass': {
-		'train': root / Path('scene_flow/monkaa_cleanpass/train'),
-		'eval': root / Path('scene_flow/monkaa_cleanpass/eval')
 	}
 }
 
@@ -199,80 +162,12 @@ class StereoImageDataset(torch.utils.data.Dataset):
 			# set removes duplicates due to *_disparity.png, *_rightImg8bit.png, *_leftImg8bit.png
 			names = list(
 				{'_'.join(str(f).split('_')[:-1]) for f in image_list})
+			names.sort()
 
 			files = {
 				'left_image': [name + '_leftImg8bit.png' for name in names],
 				'right_image': [name + '_rightImg8bit.png' for name in names],
 				'disparity_image': [name + '_disparity.png' for name in names]
-			}
-		elif self.ds_name == 'cityscapes_left':
-			image_list = [file for file in self.path.glob(
-				'**/*') if file.is_file() and file.suffix.lower() == '.png']
-
-			# set removes duplicates due to *_disparity.png, *_rightImg8bit.png, *_leftImg8bit.png
-			names = list(
-				{'_'.join(str(f).split('_')[:-1]) for f in image_list})
-
-			files = {
-				'left_image': [name + '_leftImg8bit.png' for name in names],
-				'right_image': [name + '_leftImg8bit.png' for name in names],
-				'disparity_image': [name + '_disparity.png' for name in names]
-			}
-		elif self.ds_name == 'flickr':
-			image_list = [file for file in self.path.iterdir()
-						  if file.is_file() and file.suffix.lower() in ['.jpg', '.png']]
-
-			left_images = [f for f in image_list if '_L.png' in f.name]
-			right_images = [Path(str(f).replace('_L', '_R'))
-							for f in left_images]
-
-			files = {
-				'left_image': left_images,
-				'right_image': right_images
-			}
-		elif self.ds_name == 'flickr_left':
-			image_list = [file for file in self.path.iterdir()
-						  if file.is_file() and file.suffix.lower() in ['.jpg', '.png']]
-
-			left_images = [f for f in image_list if '_L.png' in f.name]
-			right_images = [Path(str(f).replace('_L', '_R'))
-							for f in left_images]
-
-			files = {
-				'left_image': left_images,
-				'right_image': left_images
-			}
-
-		elif self.ds_name == 'holopix':
-			left_images = [file for file in (self.path / 'left').iterdir()
-						   if file.is_file() and file.suffix.lower() in ['.jpg', '.png']]
-			right_images = [Path(str(f).replace('left', 'right'))
-							for f in left_images]
-
-			files = {
-				'left_image': left_images,
-				'right_image': right_images
-			}
-
-		elif self.ds_name == 'kitti_hesic':
-			left_images = [file for file in (self.path / 'left').iterdir()
-						   if file.is_file() and file.suffix.lower() in ['.jpg', '.png']]
-			right_images = [Path(str(f).replace('left', 'right'))
-							for f in left_images]
-
-			files = {
-				'left_image': left_images,
-				'right_image': right_images
-			}
-			
-		elif self.ds_name == 'kitti':
-			left_images = [file for file in (self.path / 'image_2').glob('**/*_10.png')]
-			right_images = [Path(str(f).replace('image_2', 'image_3'))
-							for f in left_images]
-
-			files = {
-				'left_image': left_images,
-				'right_image': right_images
 			}
 		elif self.ds_name == 'instereo2k':
 			folders = [f for f in self.path.iterdir() if f.is_dir()]
@@ -282,18 +177,6 @@ class StereoImageDataset(torch.utils.data.Dataset):
 			files = {
 				'left_image': left_images,
 				'right_image': right_images
-			}
-		elif self.ds_name in ['monkaa_finalpass', 'monkaa_cleanpass']:
-			image_list = [file for file in self.path.glob(
-				'**/*') if file.is_file() and file.suffix.lower() in ['.png', '.pfm']]
-
-			disparity_left = [f for f in image_list if 'disparity_left' in str(f)]
-
-			files = {
-				'left_image': [Path(str(f).replace('disparity_left', 'left').replace('.pfm', '.png')) for f in disparity_left],
-				'right_image': [Path(str(f).replace('disparity_left', 'right').replace('.pfm', '.png')) for f in disparity_left],
-				'disparity_left': disparity_left,
-				'disparity_right': [Path(str(f).replace('disparity_left', 'disparity_right')) for f in disparity_left]
 			}
 		else:
 			raise NotImplementedError

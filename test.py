@@ -10,6 +10,11 @@ import argparse
 from pprint import pprint
 import torch
 from torch.utils.data import DataLoader
+import random
+
+random.seed(42)
+torch.manual_seed(42)
+torch.backends.cudnn.benchmark = True
 
 ##########################################################################################################################
 # Experiment parameters
@@ -18,8 +23,8 @@ c = Dict(
 
     TEST = Dict(
                 name='cityscapes#test', 
-                # transform=[MinimalCrop()], 
-                transform=[transforms.CenterCrop((512, 512))], 
+                transform=[CropCityscapesArtefacts()], # cityscapes
+                # transform=[MinimalCrop()], # instereo2k
                 kwargs={'debug': True})
 )
 ##########################################################################################################################
@@ -43,38 +48,39 @@ def test(device, resume):
     model.eval()
     scalars = {k: [] for k in ('bpp', 'bpp_left', 'bpp_right', 'mse', 'mse_left', 'mse_right', 'psnr')}
 
-    for sample in tqdm(test_loader):
-        left = sample['left'].to(device)
-        right = sample['right'].to(device)
+    with torch.no_grad():
+        for sample in tqdm(test_loader):
+            left = sample['left'].to(device)
+            right = sample['right'].to(device)
 
-        output = model(left, right, training=False)
-        pred_left, pred_right, rate_left, rate_right = output.pred_left, output.pred_right, output.rate_left, output.rate_right
+            output = model(left, right, training=False)
+            pred_left, pred_right, rate_left, rate_right = output.pred_left, output.pred_right, output.rate_left, output.rate_right
 
-        # Compute MSE
-        mse_left = calc_mse(left, pred_left)
-        mse_right = calc_mse(right, pred_right)
-        mse = (mse_left + mse_right)/2
+            # Compute MSE
+            mse_left = calc_mse(left, pred_left)
+            mse_right = calc_mse(right, pred_right)
+            mse = (mse_left + mse_right)/2
 
-        # Compute PSNR
-        psnr_left = calc_psnr(mse_left, eps=c.EPS)
-        psnr_right = calc_psnr(mse_right, eps=c.EPS)
-        psnr = (psnr_left + psnr_right)/2
+            # Compute PSNR
+            psnr_left = calc_psnr(mse_left, eps=c.EPS)
+            psnr_right = calc_psnr(mse_right, eps=c.EPS)
+            psnr = (psnr_left + psnr_right)/2
 
-        # Compute BPP
-        bpp_y_left = calc_bpp(rate_left.y, left)
-        bpp_z_left = calc_bpp(rate_left.z, left)
-        bpp_y_right = calc_bpp(rate_right.y, right)
-        bpp_z_right = calc_bpp(rate_right.z, right)
-        bpp = (bpp_y_left + bpp_z_left + bpp_y_right + bpp_z_right)/2
+            # Compute BPP
+            bpp_y_left = calc_bpp(rate_left.y, left)
+            bpp_z_left = calc_bpp(rate_left.z, left)
+            bpp_y_right = calc_bpp(rate_right.y, right)
+            bpp_z_right = calc_bpp(rate_right.z, right)
+            bpp = (bpp_y_left + bpp_z_left + bpp_y_right + bpp_z_right)/2
 
-        # Log scalars
-        scalars['bpp'].append(bpp.item())
-        scalars['bpp_left'].append(bpp_y_left.item() + bpp_z_left.item())
-        scalars['bpp_right'].append(bpp_y_right.item() + bpp_z_right.item())
-        scalars['mse'].append(mse.item())
-        scalars['mse_left'].append(mse_left.item())
-        scalars['mse_right'].append(mse_right.item())
-        scalars['psnr'].append(psnr.item())
+            # Log scalars
+            scalars['bpp'].append(bpp.item())
+            scalars['bpp_left'].append(bpp_y_left.item() + bpp_z_left.item())
+            scalars['bpp_right'].append(bpp_y_right.item() + bpp_z_right.item())
+            scalars['mse'].append(mse.item())
+            scalars['mse_left'].append(mse_left.item())
+            scalars['mse_right'].append(mse_right.item())
+            scalars['psnr'].append(psnr.item())
 
     log = [f'## {c.TEST.name} test averages:']
     for scalar in scalars:
