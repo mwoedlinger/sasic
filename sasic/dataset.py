@@ -132,25 +132,17 @@ class StereoImageDataset(torch.utils.data.Dataset):
 		return data_dict
 
 	def __getitem__(self, idx):
-		if self.ds_name in ['monkaa_finalpass', 'monkaa_cleanpass']:
-			data_dict = {
-				'left': Image.open(self.file_dict['left_image'][idx]).convert('RGB'),
-				'right': Image.open(self.file_dict['right_image'][idx]).convert('RGB'),
-				'disparity_left': readPFM(self.file_dict['disparity_left'][idx]),
-				'disparity_right': readPFM(self.file_dict['disparity_right'][idx])
-			}
-		else:
-			data_dict = {
-				'left': Image.open(self.file_dict['left_image'][idx]),
-				'right': Image.open(self.file_dict['right_image'][idx])
-			}
+		data_dict = {
+			'left': Image.open(self.file_dict['left_image'][idx]),
+			'right': Image.open(self.file_dict['right_image'][idx])
+		}
 
 		data_dict = self.apply_transforms(data_dict)
 
 		if self.return_filename:
 			return data_dict, str(self.file_dict['left_image'][idx])
 		else:
-			return data_dict
+			return data_dict, idx
 
 	def get_file_dict(self) -> list:
 		"""Get dictionary of all files in folder data_dir."""

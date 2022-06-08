@@ -18,15 +18,13 @@ from torch.utils.data import DataLoader
 # Experiment parameters
 c = Dict(
     DEBUG = False,
-    PROJECT_NAME = 'cvpr2022',
-    ENTITY = 'aistream',
-    EPOCHS = 300,
+    EPOCHS = None,
     LMDA = None,
     LR = None,
     LR_DROP = None,
     BATCH_SIZE = 1,
     EPS = 1e-9,
-    EVAL_EPOCHS = 10,
+    EVAL_EPOCHS = 33,
 
     TRAIN = Dict(
                 name='cityscapes#train',
@@ -35,8 +33,11 @@ c = Dict(
                     transforms.RandomCrop((256, 256))],
                 kwargs={'debug': False}),
     EVAL = Dict(
-                name='cityscapes#eval', 
-                transform=[transforms.CenterCrop((512, 512))], 
+                name='cityscapes#test', 
+                transform=[
+                    CropCityscapesArtefacts(),
+                    transforms.RandomCrop((256, 256))
+                    ], 
                 kwargs={'debug': False})
 )
 ##########################################################################################################################
@@ -46,10 +47,13 @@ c = Dict(
 def loss_func(bpp, mse):
     return (bpp + c.LMDA * mse) / (1 + c.LMDA)
 
-def train(exp_path, device, resume=False):
+def train(exp_path, device, resume=False, save_images=False):
     """
     Training loop function.
     """
+    from cvpr_model import StereoEncoderDecoderCVPR as StereoEncoderDecoder
+    # from sasic.model import StereoEncoderDecoder as StereoEncoderDecoderCVPR
+
     train_set = StereoImageDataset(c.TRAIN.name, transform=c.TRAIN.transform, **c.TRAIN.kwargs)
     train_loader = DataLoader(train_set, batch_size=c.BATCH_SIZE, shuffle=True,
                               num_workers=2, pin_memory=True)
@@ -58,6 +62,7 @@ def train(exp_path, device, resume=False):
     eval_loader = DataLoader(eval_set, batch_size=1, shuffle=False,
                               num_workers=2, pin_memory=True)
 
+    # model = StereoEncoderDecoderCVPR().to(device)
     model = StereoEncoderDecoder().to(device)
     optimizer = optim.Adam(model.parameters(), lr=c.LR)
     scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.1)
@@ -67,6 +72,13 @@ def train(exp_path, device, resume=False):
     else:
         start_epoch = 0
 
+    if save_images:
+        image_path = exp_path / c.EVAL.name
+        image_path.mkdir(exist_ok=False, parents=False)
+    else:
+        image_path = False
+
+
     last_time = time()
     for epoch in range(start_epoch, c.EPOCHS):
         print(f'\ntrain epoch {epoch}/{c.EPOCHS}')
@@ -75,7 +87,7 @@ def train(exp_path, device, resume=False):
         scalars = {k: [] for k in ('loss', 'bpp', 'mse', 'psnr', 'lr')}
 
         last_time = time()
-        for sample in tqdm(train_loader):
+        for sample, idx in tqdm(train_loader):
             left = sample['left'].to(device)
             right = sample['right'].to(device)
 
@@ -137,7 +149,9 @@ def train(exp_path, device, resume=False):
         if epoch % c.EVAL_EPOCHS == 0:
             print(f'########### EVALUATION BEGIN ################')
             with torch.no_grad():
-                eval_model(eval_loader, model, device, exp_path)
+                epoch_image_path = image_path / f'epoch{epoch}'
+                epoch_image_path.mkdir()
+                eval_model(eval_loader, model, device, exp_path, epoch_image_path)
             save_model(model, optimizer, epoch, exp_path)
             print(f'############ EVALUATION END #################')
 
@@ -165,17 +179,38 @@ def load_model(model, optimizer, exp_path):
 
     return checkpoint_training['epoch']
 
-def eval_model(eval_loader, model, device, exp_path):
+def save_images(left, right, pred_left, pred_right, data_loader, idx, image_path,
+                psnr, mse, bpp, bpp_left, bpp_right, mse_left, mse_right):
+    dataset = data_loader.dataset
+    file_dict = dataset.file_dict
+    left_name = Path(file_dict['left_image'][idx]).stem
+    right_name = Path(file_dict['right_image'][idx]).stem
+
+    topil = transforms.ToPILImage()
+    metric_str = f'{bpp:.4}_{psnr:.4}_'
+
+    topil(left[0]).save(image_path / (left_name+'.png'))
+    topil(pred_left[0]).save(image_path / (metric_str+left_name+'_pred.png'))
+    topil(right[0]).save(image_path / (right_name+'.png'))
+    topil(pred_right[0]).save(image_path / (metric_str+right_name+'_pred.png'))
+
+    with open(image_path / 'metrics.txt', 'a') as f:
+        f.write(f'{left_name}: {psnr=}, {mse=}, {bpp=}, {bpp_left=}, {bpp_right=}, {mse_left=}, {mse_right=}\n')
+
+
+def eval_model(eval_loader, model, device, exp_path, image_path=False):
     print(f'  Start evaluation on {c.EVAL.name} dataset.')
     model.eval()
     scalars = {k: [] for k in ('loss', 'bpp', 'bpp_left', 'bpp_right', 'mse', 'mse_left', 'mse_right', 'psnr')}
 
-    for sample in tqdm(eval_loader):
+    for sample, idx in tqdm(eval_loader):
         left = sample['left'].to(device)
         right = sample['right'].to(device)
 
         output = model(left, right, training=False)
         pred_left, pred_right, rate_left, rate_right = output.pred_left, output.pred_right, output.rate_left, output.rate_right
+        pred_left = torch.clamp(pred_left, min=0.0, max=1.0)
+        pred_right = torch.clamp(pred_right, min=0.0, max=1.0)
 
         # Compute MSE
         mse_left = calc_mse(left, pred_left)
@@ -196,6 +231,10 @@ def eval_model(eval_loader, model, device, exp_path):
 
         # Computer RD-Loss
         loss = loss_func(bpp, mse)
+
+        save_images(left=left, right=right, pred_left=pred_left, pred_right=pred_right, data_loader=eval_loader, idx=idx, image_path=image_path,
+                    psnr=psnr.item(), mse=mse.item(), bpp=bpp.item(), bpp_left=bpp_y_left.item()+bpp_z_left.item(), bpp_right=bpp_y_right.item()+bpp_z_right.item(), 
+                    mse_left=mse_left.item(), mse_right=mse_right.item())
 
         # Log scalars
         scalars['loss'].append(loss.item())
@@ -226,7 +265,7 @@ if __name__ == "__main__":
     parser.add_argument('--batch_size', default=1, type=int)
     parser.add_argument('--lr_drop', default=1500000, type=int)
     parser.add_argument('--epochs', default=1000, type=int)
-    parser.add_argument('--train', default='instereo2k', 
+    parser.add_argument('--train', default='cityscapes', 
                         help=f'name of training dataset. Options (includes stero image datasets): {", ".join(list(data_zoo_stereo.keys()))}')
     args = parser.parse_args()
 
@@ -252,4 +291,4 @@ if __name__ == "__main__":
     exp_path = Path(f'./experiments/{run_name}')
     exp_path.mkdir(exist_ok=False)
 
-    train(exp_path, device, resume)
+    train(exp_path, device, resume, save_images=True)
