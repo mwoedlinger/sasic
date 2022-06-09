@@ -27,6 +27,11 @@ data_zoo_stereo = {
 	'instereo2k': {
 		'train': root / Path('instereo2k/train'),
 		'test': root / Path('instereo2k/test'),
+	},
+	'DATASET': {
+		'train': Path('Path/to/train'),
+		'eval': Path('Path/to/eval'),
+		'test': Path('Path/to/test')
 	}
 }
 
@@ -170,6 +175,15 @@ class StereoImageDataset(torch.utils.data.Dataset):
 				'left_image': left_images,
 				'right_image': right_images
 			}
+		elif self.ds_name == 'DATASET':
+			# Write your own section here
+			# The folder path can be accessed via self.path
+			# The result should be a dictionary 'files' with the keys 'left_image' and 'right_image' and corresponding lists with filenames:
+			# files = {
+			# 	'left_image': [(self.path / 'left_1.png'), (self.path / 'left_2.png')],
+			# 	'right_image': [(self.path / 'right_1.png'), (self.path / 'right_2.png')]
+			# }
+			pass
 		else:
 			raise NotImplementedError
 

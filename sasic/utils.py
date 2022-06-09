@@ -7,13 +7,13 @@ import numpy as np
 
 def calc_bpp(rate, image):
 	H, W = image.shape[-2:]
-	return rate / (H * W)
+	return rate.mean() / (H * W)
 
 def calc_mse(target, pred):
 	mse = torch.mean((target - pred) ** 2, dim=(-1, -2, -3)) * 255.0 ** 2
 	if mse.shape[0] == 1:
 		mse = mse[0]
-	return mse
+	return mse.mean()
 
 def calc_psnr(mse, eps):
 	mse = F.threshold(mse, eps, eps)
@@ -176,32 +176,31 @@ def left_to_right(x_left, shift):
 	return out
 
 class GetShift:
-	
-	def __init__(self, max_shift=100):
+
+	def __init__(self, max_shift=256):
 		def mse(pred, target, dim=[2,3]):
 			return torch.mean((pred-target)**2, dim=dim)
-		
+
 		self.criterion = mse
 		self.max_shift = max_shift
-		
+
 	def __call__(self, x_left, x_right):
-		assert x_left.shape[0] == 1, 'Batch size must be 1'
-		c = x_left.shape[1]
-		min_loss = [1e10]*c
-		best_shift = [0]*c
-		
+		device = x_left.device
+		b, c = x_left.shape[:2]
+		min_loss = 1e10*torch.ones((b, c)).to(device)
+		best_shift = torch.zeros((b, c)).to(device)
+
 		for s in range(0, self.max_shift):
 			if s == 0:
 				loss = self.criterion(x_left, x_right)
 			else:
 				loss = self.criterion(x_left[:,:,:,s:], x_right[:,:,:,:-s])
-			
-			for n in range(c):
-				if loss[0,n] < min_loss[n]:
-					min_loss[n] = loss[0,n]
-					best_shift[n] = s
-									
-		return [best_shift]
+
+			improved = loss < min_loss
+			min_loss[improved] = loss[improved]
+			best_shift[improved] = s
+
+		return best_shift.int().tolist()
 
 # import torch.nn as nn
 # from einops import rearrange

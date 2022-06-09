@@ -51,9 +51,6 @@ def train(exp_path, device, resume=False, save_images=False):
     """
     Training loop function.
     """
-    from cvpr_model import StereoEncoderDecoderCVPR as StereoEncoderDecoder
-    # from sasic.model import StereoEncoderDecoder as StereoEncoderDecoderCVPR
-
     train_set = StereoImageDataset(c.TRAIN.name, transform=c.TRAIN.transform, **c.TRAIN.kwargs)
     train_loader = DataLoader(train_set, batch_size=c.BATCH_SIZE, shuffle=True,
                               num_workers=2, pin_memory=True)
@@ -62,7 +59,6 @@ def train(exp_path, device, resume=False, save_images=False):
     eval_loader = DataLoader(eval_set, batch_size=1, shuffle=False,
                               num_workers=2, pin_memory=True)
 
-    # model = StereoEncoderDecoderCVPR().to(device)
     model = StereoEncoderDecoder().to(device)
     optimizer = optim.Adam(model.parameters(), lr=c.LR)
     scheduler = optim.lr_scheduler.ExponentialLR(optimizer, gamma=0.1)
@@ -121,7 +117,7 @@ def train(exp_path, device, resume=False, save_images=False):
             loss = loss_func(bpp, mse)
 
             # Backward - optimize
-            loss.backward()
+            loss.mean().backward()
             torch.nn.utils.clip_grad_norm_(model.parameters(), 2.50)
             optimizer.step()
 
@@ -254,7 +250,6 @@ def eval_model(eval_loader, model, device, exp_path, image_path=False):
     with open(exp_path / 'log.txt', 'a') as f:
         f.write(log_str)
         print(log_str)
-
 
 
 if __name__ == "__main__":
