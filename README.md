@@ -24,12 +24,17 @@ Test a model with test.py. Example:
 
 where `RESUME` points to a directory that contains a trained `model.pt` file (in the training example above `RESUME` would be set to `experiments/EXP_NAME-HASH`).
 
-<!-- ## Citation
+## Citation
 
 If you use this project please consider citing our work
 
 ```
-@article{
-    TODO
+@InProceedings{Wodlinger_2022_CVPR,
+    author    = {W\"odlinger, Matthias and Kotera, Jan and Xu, Jan and Sablatnig, Robert},
+    title     = {SASIC: Stereo Image Compression With Latent Shifts and Stereo Attention},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {661-670}
 }
-``` -->
+```
