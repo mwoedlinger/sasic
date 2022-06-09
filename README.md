@@ -5,7 +5,7 @@ Official code of our CVPR paper *"SASIC: Stereo Image Compression with Latent Sh
 
 Install the necessary packages from the `requirements.txt` file with pip:
 
-````pip install -r requirements.txt```
+```pip install -r requirements.txt```
 
 ## Data
 To use your own dataset set the paths to your dataset in the "data_zoo_stereo" dictionary in sasic/dataset.py and write a corresponding section in the "get_file_dict" method.
