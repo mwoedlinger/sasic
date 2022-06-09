@@ -1,0 +1,2938 @@
+
+  ## epoch 0 averages:
+  loss      : 1.573
+  bpp       : 0.4727
+  mse       : 111.6
+  psnr      : 29.94
+  lr        : 0.0001
+    ## eval averages:
+    loss      : 0.7373
+    bpp       : 0.2246
+    bpp_left  : 0.2518
+    bpp_right : 0.1975
+    mse       : 52.01
+    mse_left  : 48.08
+    mse_right : 55.93
+    psnr      : 31.63
+  ## epoch 1 averages:
+  loss      : 0.8279
+  bpp       : 0.4013
+  mse       : 43.49
+  psnr      : 32.69
+  lr        : 0.0001
+  ## epoch 2 averages:
+  loss      : 0.6969
+  bpp       : 0.3675
+  mse       : 33.64
+  psnr      : 33.71
+  lr        : 0.0001
+  ## epoch 3 averages:
+  loss      : 0.6383
+  bpp       : 0.3498
+  mse       : 29.48
+  psnr      : 34.19
+  lr        : 0.0001
+  ## epoch 4 averages:
+  loss      : 0.5984
+  bpp       : 0.3382
+  mse       : 26.62
+  psnr      : 34.61
+  lr        : 0.0001
+  ## epoch 5 averages:
+  loss      : 0.5743
+  bpp       : 0.3295
+  mse       : 25.06
+  psnr      : 34.86
+  lr        : 0.0001
+  ## epoch 6 averages:
+  loss      : 0.5663
+  bpp       : 0.3252
+  mse       : 24.68
+  psnr      : 34.98
+  lr        : 0.0001
+  ## epoch 7 averages:
+  loss      : 0.5402
+  bpp       : 0.3188
+  mse       : 22.68
+  psnr      : 35.26
+  lr        : 0.0001
+  ## epoch 8 averages:
+  loss      : 0.5365
+  bpp       : 0.3174
+  mse       : 22.45
+  psnr      : 35.31
+  lr        : 0.0001
+  ## epoch 9 averages:
+  loss      : 0.5308
+  bpp       : 0.3151
+  mse       : 22.1
+  psnr      : 35.41
+  lr        : 0.0001
+  ## epoch 10 averages:
+  loss      : 0.5203
+  bpp       : 0.3126
+  mse       : 21.29
+  psnr      : 35.54
+  lr        : 0.0001
+  ## epoch 11 averages:
+  loss      : 0.5163
+  bpp       : 0.3113
+  mse       : 21.02
+  psnr      : 35.6
+  lr        : 0.0001
+  ## epoch 12 averages:
+  loss      : 0.5123
+  bpp       : 0.3097
+  mse       : 20.78
+  psnr      : 35.66
+  lr        : 0.0001
+  ## epoch 13 averages:
+  loss      : 0.5101
+  bpp       : 0.307
+  mse       : 20.82
+  psnr      : 35.69
+  lr        : 0.0001
+  ## epoch 14 averages:
+  loss      : 0.4996
+  bpp       : 0.304
+  mse       : 20.06
+  psnr      : 35.79
+  lr        : 0.0001
+  ## epoch 15 averages:
+  loss      : 0.4906
+  bpp       : 0.301
+  mse       : 19.44
+  psnr      : 35.92
+  lr        : 0.0001
+  ## epoch 16 averages:
+  loss      : 0.4897
+  bpp       : 0.3004
+  mse       : 19.42
+  psnr      : 35.94
+  lr        : 0.0001
+  ## epoch 17 averages:
+  loss      : 0.4882
+  bpp       : 0.2995
+  mse       : 19.36
+  psnr      : 35.96
+  lr        : 0.0001
+  ## epoch 18 averages:
+  loss      : 0.491
+  bpp       : 0.3002
+  mse       : 19.57
+  psnr      : 35.91
+  lr        : 0.0001
+  ## epoch 19 averages:
+  loss      : 0.4831
+  bpp       : 0.2989
+  mse       : 18.9
+  psnr      : 36.04
+  lr        : 0.0001
+  ## epoch 20 averages:
+  loss      : 0.4797
+  bpp       : 0.2969
+  mse       : 18.76
+  psnr      : 36.11
+  lr        : 0.0001
+  ## epoch 21 averages:
+  loss      : 0.4807
+  bpp       : 0.2972
+  mse       : 18.82
+  psnr      : 36.08
+  lr        : 0.0001
+  ## epoch 22 averages:
+  loss      : 0.4803
+  bpp       : 0.2976
+  mse       : 18.74
+  psnr      : 36.1
+  lr        : 0.0001
+  ## epoch 23 averages:
+  loss      : 0.4762
+  bpp       : 0.2956
+  mse       : 18.53
+  psnr      : 36.18
+  lr        : 0.0001
+  ## epoch 24 averages:
+  loss      : 0.4732
+  bpp       : 0.2952
+  mse       : 18.27
+  psnr      : 36.18
+  lr        : 0.0001
+  ## epoch 25 averages:
+  loss      : 0.4745
+  bpp       : 0.2961
+  mse       : 18.31
+  psnr      : 36.21
+  lr        : 0.0001
+  ## epoch 26 averages:
+  loss      : 0.4745
+  bpp       : 0.2956
+  mse       : 18.36
+  psnr      : 36.22
+  lr        : 0.0001
+  ## epoch 27 averages:
+  loss      : 0.4707
+  bpp       : 0.2951
+  mse       : 18.03
+  psnr      : 36.26
+  lr        : 0.0001
+  ## epoch 28 averages:
+  loss      : 0.4686
+  bpp       : 0.2945
+  mse       : 17.87
+  psnr      : 36.3
+  lr        : 0.0001
+  ## epoch 29 averages:
+  loss      : 0.4669
+  bpp       : 0.2947
+  mse       : 17.69
+  psnr      : 36.33
+  lr        : 0.0001
+  ## epoch 30 averages:
+  loss      : 0.4677
+  bpp       : 0.2953
+  mse       : 17.71
+  psnr      : 36.32
+  lr        : 0.0001
+  ## epoch 31 averages:
+  loss      : 0.4671
+  bpp       : 0.2959
+  mse       : 17.59
+  psnr      : 36.35
+  lr        : 0.0001
+  ## epoch 32 averages:
+  loss      : 0.467
+  bpp       : 0.2961
+  mse       : 17.56
+  psnr      : 36.37
+  lr        : 0.0001
+  ## epoch 33 averages:
+  loss      : 0.4658
+  bpp       : 0.297
+  mse       : 17.35
+  psnr      : 36.39
+  lr        : 0.0001
+    ## eval averages:
+    loss      : 0.3057
+    bpp       : 0.1354
+    bpp_left  : 0.1598
+    bpp_right : 0.111
+    mse       : 17.33
+    mse_left  : 17.88
+    mse_right : 16.78
+    psnr      : 36.27
+  ## epoch 34 averages:
+  loss      : 0.4647
+  bpp       : 0.297
+  mse       : 17.23
+  psnr      : 36.4
+  lr        : 0.0001
+  ## epoch 35 averages:
+  loss      : 0.4631
+  bpp       : 0.2964
+  mse       : 17.14
+  psnr      : 36.42
+  lr        : 0.0001
+  ## epoch 36 averages:
+  loss      : 0.464
+  bpp       : 0.2966
+  mse       : 17.21
+  psnr      : 36.42
+  lr        : 0.0001
+  ## epoch 37 averages:
+  loss      : 0.4599
+  bpp       : 0.2957
+  mse       : 16.88
+  psnr      : 36.49
+  lr        : 0.0001
+  ## epoch 38 averages:
+  loss      : 0.4618
+  bpp       : 0.2963
+  mse       : 17.01
+  psnr      : 36.47
+  lr        : 0.0001
+  ## epoch 39 averages:
+  loss      : 0.4614
+  bpp       : 0.2962
+  mse       : 16.98
+  psnr      : 36.49
+  lr        : 0.0001
+  ## epoch 40 averages:
+  loss      : 0.4591
+  bpp       : 0.2955
+  mse       : 16.81
+  psnr      : 36.52
+  lr        : 0.0001
+  ## epoch 41 averages:
+  loss      : 0.4597
+  bpp       : 0.2954
+  mse       : 16.88
+  psnr      : 36.52
+  lr        : 0.0001
+  ## epoch 42 averages:
+  loss      : 0.4584
+  bpp       : 0.2954
+  mse       : 16.76
+  psnr      : 36.52
+  lr        : 0.0001
+  ## epoch 43 averages:
+  loss      : 0.4602
+  bpp       : 0.2961
+  mse       : 16.87
+  psnr      : 36.5
+  lr        : 0.0001
+  ## epoch 44 averages:
+  loss      : 0.4537
+  bpp       : 0.2941
+  mse       : 16.42
+  psnr      : 36.58
+  lr        : 0.0001
+  ## epoch 45 averages:
+  loss      : 0.4531
+  bpp       : 0.2933
+  mse       : 16.43
+  psnr      : 36.63
+  lr        : 0.0001
+  ## epoch 46 averages:
+  loss      : 0.4572
+  bpp       : 0.2953
+  mse       : 16.65
+  psnr      : 36.56
+  lr        : 0.0001
+  ## epoch 47 averages:
+  loss      : 0.4576
+  bpp       : 0.2955
+  mse       : 16.68
+  psnr      : 36.55
+  lr        : 0.0001
+  ## epoch 48 averages:
+  loss      : 0.456
+  bpp       : 0.2951
+  mse       : 16.55
+  psnr      : 36.59
+  lr        : 0.0001
+  ## epoch 49 averages:
+  loss      : 0.4522
+  bpp       : 0.2934
+  mse       : 16.33
+  psnr      : 36.63
+  lr        : 0.0001
+  ## epoch 50 averages:
+  loss      : 0.4596
+  bpp       : 0.2967
+  mse       : 16.75
+  psnr      : 36.52
+  lr        : 0.0001
+  ## epoch 51 averages:
+  loss      : 0.4522
+  bpp       : 0.2934
+  mse       : 16.34
+  psnr      : 36.65
+  lr        : 0.0001
+  ## epoch 52 averages:
+  loss      : 0.4533
+  bpp       : 0.2942
+  mse       : 16.36
+  psnr      : 36.65
+  lr        : 0.0001
+  ## epoch 53 averages:
+  loss      : 0.4543
+  bpp       : 0.2947
+  mse       : 16.42
+  psnr      : 36.61
+  lr        : 0.0001
+  ## epoch 54 averages:
+  loss      : 0.4538
+  bpp       : 0.2946
+  mse       : 16.37
+  psnr      : 36.58
+  lr        : 0.0001
+  ## epoch 55 averages:
+  loss      : 0.4531
+  bpp       : 0.2939
+  mse       : 16.37
+  psnr      : 36.64
+  lr        : 0.0001
+  ## epoch 56 averages:
+  loss      : 0.4489
+  bpp       : 0.2924
+  mse       : 16.11
+  psnr      : 36.68
+  lr        : 0.0001
+  ## epoch 57 averages:
+  loss      : 0.4503
+  bpp       : 0.2933
+  mse       : 16.15
+  psnr      : 36.7
+  lr        : 0.0001
+  ## epoch 58 averages:
+  loss      : 0.4477
+  bpp       : 0.2916
+  mse       : 16.06
+  psnr      : 36.71
+  lr        : 0.0001
+  ## epoch 59 averages:
+  loss      : 0.4503
+  bpp       : 0.2938
+  mse       : 16.1
+  psnr      : 36.68
+  lr        : 0.0001
+  ## epoch 60 averages:
+  loss      : 0.4523
+  bpp       : 0.2939
+  mse       : 16.28
+  psnr      : 36.66
+  lr        : 0.0001
+  ## epoch 61 averages:
+  loss      : 0.4539
+  bpp       : 0.2944
+  mse       : 16.4
+  psnr      : 36.61
+  lr        : 0.0001
+  ## epoch 62 averages:
+  loss      : 0.4526
+  bpp       : 0.2946
+  mse       : 16.25
+  psnr      : 36.66
+  lr        : 0.0001
+  ## epoch 63 averages:
+  loss      : 0.4504
+  bpp       : 0.2938
+  mse       : 16.11
+  psnr      : 36.68
+  lr        : 0.0001
+  ## epoch 64 averages:
+  loss      : 0.4478
+  bpp       : 0.2925
+  mse       : 15.98
+  psnr      : 36.71
+  lr        : 0.0001
+  ## epoch 65 averages:
+  loss      : 0.4475
+  bpp       : 0.2924
+  mse       : 15.96
+  psnr      : 36.73
+  lr        : 0.0001
+  ## epoch 66 averages:
+  loss      : 0.4517
+  bpp       : 0.2943
+  mse       : 16.19
+  psnr      : 36.69
+  lr        : 0.0001
+    ## eval averages:
+    loss      : 0.2761
+    bpp       : 0.1335
+    bpp_left  : 0.1582
+    bpp_right : 0.1089
+    mse       : 14.53
+    mse_left  : 14.98
+    mse_right : 14.07
+    psnr      : 37.1
+  ## epoch 67 averages:
+  loss      : 0.4445
+  bpp       : 0.2911
+  mse       : 15.79
+  psnr      : 36.78
+  lr        : 0.0001
+  ## epoch 68 averages:
+  loss      : 0.4495
+  bpp       : 0.2937
+  mse       : 16.03
+  psnr      : 36.73
+  lr        : 0.0001
+  ## epoch 69 averages:
+  loss      : 0.4474
+  bpp       : 0.2926
+  mse       : 15.93
+  psnr      : 36.74
+  lr        : 0.0001
+  ## epoch 70 averages:
+  loss      : 0.4481
+  bpp       : 0.2927
+  mse       : 15.99
+  psnr      : 36.74
+  lr        : 0.0001
+  ## epoch 71 averages:
+  loss      : 0.4485
+  bpp       : 0.2934
+  mse       : 15.96
+  psnr      : 36.73
+  lr        : 0.0001
+  ## epoch 72 averages:
+  loss      : 0.4508
+  bpp       : 0.2942
+  mse       : 16.11
+  psnr      : 36.7
+  lr        : 0.0001
+  ## epoch 73 averages:
+  loss      : 0.4507
+  bpp       : 0.2935
+  mse       : 16.17
+  psnr      : 36.69
+  lr        : 0.0001
+  ## epoch 74 averages:
+  loss      : 0.4471
+  bpp       : 0.292
+  mse       : 15.95
+  psnr      : 36.74
+  lr        : 0.0001
+  ## epoch 75 averages:
+  loss      : 0.4507
+  bpp       : 0.294
+  mse       : 16.12
+  psnr      : 36.68
+  lr        : 0.0001
+  ## epoch 76 averages:
+  loss      : 0.4465
+  bpp       : 0.2923
+  mse       : 15.88
+  psnr      : 36.74
+  lr        : 0.0001
+  ## epoch 77 averages:
+  loss      : 0.4476
+  bpp       : 0.2937
+  mse       : 15.83
+  psnr      : 36.74
+  lr        : 0.0001
+  ## epoch 78 averages:
+  loss      : 0.4422
+  bpp       : 0.2905
+  mse       : 15.62
+  psnr      : 36.84
+  lr        : 0.0001
+  ## epoch 79 averages:
+  loss      : 0.4427
+  bpp       : 0.2912
+  mse       : 15.6
+  psnr      : 36.83
+  lr        : 0.0001
+  ## epoch 80 averages:
+  loss      : 0.4479
+  bpp       : 0.2933
+  mse       : 15.91
+  psnr      : 36.74
+  lr        : 0.0001
+  ## epoch 81 averages:
+  loss      : 0.4436
+  bpp       : 0.291
+  mse       : 15.7
+  psnr      : 36.81
+  lr        : 0.0001
+  ## epoch 82 averages:
+  loss      : 0.4468
+  bpp       : 0.2928
+  mse       : 15.85
+  psnr      : 36.76
+  lr        : 0.0001
+  ## epoch 83 averages:
+  loss      : 0.4466
+  bpp       : 0.2922
+  mse       : 15.89
+  psnr      : 36.75
+  lr        : 0.0001
+  ## epoch 84 averages:
+  loss      : 0.4485
+  bpp       : 0.2935
+  mse       : 15.95
+  psnr      : 36.76
+  lr        : 0.0001
+  ## epoch 85 averages:
+  loss      : 0.4464
+  bpp       : 0.2927
+  mse       : 15.81
+  psnr      : 36.77
+  lr        : 0.0001
+  ## epoch 86 averages:
+  loss      : 0.4426
+  bpp       : 0.2908
+  mse       : 15.62
+  psnr      : 36.84
+  lr        : 0.0001
+  ## epoch 87 averages:
+  loss      : 0.4493
+  bpp       : 0.294
+  mse       : 15.98
+  psnr      : 36.72
+  lr        : 0.0001
+  ## epoch 88 averages:
+  loss      : 0.4451
+  bpp       : 0.2925
+  mse       : 15.71
+  psnr      : 36.8
+  lr        : 0.0001
+  ## epoch 89 averages:
+  loss      : 0.4438
+  bpp       : 0.2912
+  mse       : 15.7
+  psnr      : 36.8
+  lr        : 0.0001
+  ## epoch 90 averages:
+  loss      : 0.4419
+  bpp       : 0.2911
+  mse       : 15.52
+  psnr      : 36.81
+  lr        : 0.0001
+  ## epoch 91 averages:
+  loss      : 0.4401
+  bpp       : 0.29
+  mse       : 15.45
+  psnr      : 36.88
+  lr        : 0.0001
+  ## epoch 92 averages:
+  loss      : 0.4466
+  bpp       : 0.293
+  mse       : 15.8
+  psnr      : 36.77
+  lr        : 0.0001
+  ## epoch 93 averages:
+  loss      : 0.4468
+  bpp       : 0.293
+  mse       : 15.83
+  psnr      : 36.76
+  lr        : 0.0001
+  ## epoch 94 averages:
+  loss      : 0.4462
+  bpp       : 0.2923
+  mse       : 15.83
+  psnr      : 36.77
+  lr        : 0.0001
+  ## epoch 95 averages:
+  loss      : 0.4389
+  bpp       : 0.2901
+  mse       : 15.32
+  psnr      : 36.87
+  lr        : 0.0001
+  ## epoch 96 averages:
+  loss      : 0.4466
+  bpp       : 0.2929
+  mse       : 15.82
+  psnr      : 36.76
+  lr        : 0.0001
+  ## epoch 97 averages:
+  loss      : 0.4418
+  bpp       : 0.2914
+  mse       : 15.48
+  psnr      : 36.87
+  lr        : 0.0001
+  ## epoch 98 averages:
+  loss      : 0.4482
+  bpp       : 0.2928
+  mse       : 16.0
+  psnr      : 36.75
+  lr        : 0.0001
+  ## epoch 99 averages:
+  loss      : 0.4429
+  bpp       : 0.2914
+  mse       : 15.59
+  psnr      : 36.83
+  lr        : 0.0001
+    ## eval averages:
+    loss      : 0.2673
+    bpp       : 0.1305
+    bpp_left  : 0.1546
+    bpp_right : 0.1063
+    mse       : 13.95
+    mse_left  : 14.16
+    mse_right : 13.75
+    psnr      : 37.23
+  ## epoch 100 averages:
+  loss      : 0.4433
+  bpp       : 0.2921
+  mse       : 15.56
+  psnr      : 36.84
+  lr        : 0.0001
+  ## epoch 101 averages:
+  loss      : 0.4399
+  bpp       : 0.2906
+  mse       : 15.37
+  psnr      : 36.89
+  lr        : 0.0001
+  ## epoch 102 averages:
+  loss      : 0.443
+  bpp       : 0.2917
+  mse       : 15.58
+  psnr      : 36.83
+  lr        : 0.0001
+  ## epoch 103 averages:
+  loss      : 0.4423
+  bpp       : 0.2915
+  mse       : 15.51
+  psnr      : 36.85
+  lr        : 0.0001
+  ## epoch 104 averages:
+  loss      : 0.4456
+  bpp       : 0.2922
+  mse       : 15.78
+  psnr      : 36.81
+  lr        : 0.0001
+  ## epoch 105 averages:
+  loss      : 0.4452
+  bpp       : 0.2925
+  mse       : 15.72
+  psnr      : 36.81
+  lr        : 0.0001
+  ## epoch 106 averages:
+  loss      : 0.4421
+  bpp       : 0.2918
+  mse       : 15.47
+  psnr      : 36.85
+  lr        : 0.0001
+  ## epoch 107 averages:
+  loss      : 0.4453
+  bpp       : 0.2922
+  mse       : 15.76
+  psnr      : 36.82
+  lr        : 0.0001
+  ## epoch 108 averages:
+  loss      : 0.4428
+  bpp       : 0.2916
+  mse       : 15.56
+  psnr      : 36.84
+  lr        : 0.0001
+  ## epoch 109 averages:
+  loss      : 0.4427
+  bpp       : 0.2917
+  mse       : 15.55
+  psnr      : 36.85
+  lr        : 0.0001
+  ## epoch 110 averages:
+  loss      : 0.4416
+  bpp       : 0.2914
+  mse       : 15.46
+  psnr      : 36.87
+  lr        : 0.0001
+  ## epoch 111 averages:
+  loss      : 0.442
+  bpp       : 0.2913
+  mse       : 15.51
+  psnr      : 36.85
+  lr        : 0.0001
+  ## epoch 112 averages:
+  loss      : 0.4428
+  bpp       : 0.2919
+  mse       : 15.53
+  psnr      : 36.85
+  lr        : 0.0001
+  ## epoch 113 averages:
+  loss      : 0.4407
+  bpp       : 0.291
+  mse       : 15.42
+  psnr      : 36.87
+  lr        : 0.0001
+  ## epoch 114 averages:
+  loss      : 0.4412
+  bpp       : 0.2913
+  mse       : 15.44
+  psnr      : 36.86
+  lr        : 0.0001
+  ## epoch 115 averages:
+  loss      : 0.4399
+  bpp       : 0.2907
+  mse       : 15.36
+  psnr      : 36.91
+  lr        : 0.0001
+  ## epoch 116 averages:
+  loss      : 0.4412
+  bpp       : 0.2913
+  mse       : 15.43
+  psnr      : 36.89
+  lr        : 0.0001
+  ## epoch 117 averages:
+  loss      : 0.4442
+  bpp       : 0.2925
+  mse       : 15.61
+  psnr      : 36.82
+  lr        : 0.0001
+  ## epoch 118 averages:
+  loss      : 0.4446
+  bpp       : 0.2931
+  mse       : 15.59
+  psnr      : 36.84
+  lr        : 0.0001
+  ## epoch 119 averages:
+  loss      : 0.4403
+  bpp       : 0.2909
+  mse       : 15.38
+  psnr      : 36.92
+  lr        : 0.0001
+  ## epoch 120 averages:
+  loss      : 0.4376
+  bpp       : 0.2895
+  mse       : 15.24
+  psnr      : 36.95
+  lr        : 0.0001
+  ## epoch 121 averages:
+  loss      : 0.4407
+  bpp       : 0.2907
+  mse       : 15.44
+  psnr      : 36.91
+  lr        : 0.0001
+  ## epoch 122 averages:
+  loss      : 0.4425
+  bpp       : 0.2919
+  mse       : 15.5
+  psnr      : 36.85
+  lr        : 0.0001
+  ## epoch 123 averages:
+  loss      : 0.4419
+  bpp       : 0.2918
+  mse       : 15.45
+  psnr      : 36.86
+  lr        : 0.0001
+  ## epoch 124 averages:
+  loss      : 0.4386
+  bpp       : 0.2902
+  mse       : 15.28
+  psnr      : 36.94
+  lr        : 0.0001
+  ## epoch 125 averages:
+  loss      : 0.44
+  bpp       : 0.291
+  mse       : 15.35
+  psnr      : 36.9
+  lr        : 0.0001
+  ## epoch 126 averages:
+  loss      : 0.4428
+  bpp       : 0.2918
+  mse       : 15.54
+  psnr      : 36.87
+  lr        : 0.0001
+  ## epoch 127 averages:
+  loss      : 0.4404
+  bpp       : 0.2913
+  mse       : 15.34
+  psnr      : 36.91
+  lr        : 0.0001
+  ## epoch 128 averages:
+  loss      : 0.442
+  bpp       : 0.2918
+  mse       : 15.47
+  psnr      : 36.88
+  lr        : 0.0001
+  ## epoch 129 averages:
+  loss      : 0.4431
+  bpp       : 0.2925
+  mse       : 15.51
+  psnr      : 36.84
+  lr        : 0.0001
+  ## epoch 130 averages:
+  loss      : 0.4401
+  bpp       : 0.2908
+  mse       : 15.37
+  psnr      : 36.9
+  lr        : 0.0001
+  ## epoch 131 averages:
+  loss      : 0.4415
+  bpp       : 0.2914
+  mse       : 15.45
+  psnr      : 36.89
+  lr        : 0.0001
+  ## epoch 132 averages:
+  loss      : 0.4403
+  bpp       : 0.2913
+  mse       : 15.33
+  psnr      : 36.9
+  lr        : 0.0001
+    ## eval averages:
+    loss      : 0.2727
+    bpp       : 0.1322
+    bpp_left  : 0.1595
+    bpp_right : 0.1049
+    mse       : 14.32
+    mse_left  : 14.88
+    mse_right : 13.75
+    psnr      : 37.11
+  ## epoch 133 averages:
+  loss      : 0.4422
+  bpp       : 0.2918
+  mse       : 15.48
+  psnr      : 36.88
+  lr        : 0.0001
+  ## epoch 134 averages:
+  loss      : 0.4404
+  bpp       : 0.291
+  mse       : 15.38
+  psnr      : 36.93
+  lr        : 0.0001
+  ## epoch 135 averages:
+  loss      : 0.4415
+  bpp       : 0.2916
+  mse       : 15.43
+  psnr      : 36.88
+  lr        : 0.0001
+  ## epoch 136 averages:
+  loss      : 0.4374
+  bpp       : 0.2899
+  mse       : 15.19
+  psnr      : 36.96
+  lr        : 0.0001
+  ## epoch 137 averages:
+  loss      : 0.4388
+  bpp       : 0.2903
+  mse       : 15.29
+  psnr      : 36.92
+  lr        : 0.0001
+  ## epoch 138 averages:
+  loss      : 0.4407
+  bpp       : 0.2914
+  mse       : 15.38
+  psnr      : 36.93
+  lr        : 0.0001
+  ## epoch 139 averages:
+  loss      : 0.4398
+  bpp       : 0.2913
+  mse       : 15.29
+  psnr      : 36.9
+  lr        : 0.0001
+  ## epoch 140 averages:
+  loss      : 0.4394
+  bpp       : 0.2911
+  mse       : 15.27
+  psnr      : 36.9
+  lr        : 0.0001
+  ## epoch 141 averages:
+  loss      : 0.4418
+  bpp       : 0.2919
+  mse       : 15.43
+  psnr      : 36.86
+  lr        : 0.0001
+  ## epoch 142 averages:
+  loss      : 0.4398
+  bpp       : 0.2916
+  mse       : 15.26
+  psnr      : 36.94
+  lr        : 0.0001
+  ## epoch 143 averages:
+  loss      : 0.4422
+  bpp       : 0.2919
+  mse       : 15.47
+  psnr      : 36.91
+  lr        : 0.0001
+  ## epoch 144 averages:
+  loss      : 0.4349
+  bpp       : 0.2888
+  mse       : 15.05
+  psnr      : 36.98
+  lr        : 0.0001
+  ## epoch 145 averages:
+  loss      : 0.4372
+  bpp       : 0.2899
+  mse       : 15.17
+  psnr      : 36.94
+  lr        : 0.0001
+  ## epoch 146 averages:
+  loss      : 0.4336
+  bpp       : 0.2885
+  mse       : 14.94
+  psnr      : 36.99
+  lr        : 0.0001
+  ## epoch 147 averages:
+  loss      : 0.4361
+  bpp       : 0.289
+  mse       : 15.14
+  psnr      : 36.98
+  lr        : 0.0001
+  ## epoch 148 averages:
+  loss      : 0.4376
+  bpp       : 0.29
+  mse       : 15.2
+  psnr      : 36.94
+  lr        : 0.0001
+  ## epoch 149 averages:
+  loss      : 0.4387
+  bpp       : 0.2913
+  mse       : 15.18
+  psnr      : 36.93
+  lr        : 0.0001
+  ## epoch 150 averages:
+  loss      : 0.4414
+  bpp       : 0.2921
+  mse       : 15.37
+  psnr      : 36.89
+  lr        : 0.0001
+  ## epoch 151 averages:
+  loss      : 0.437
+  bpp       : 0.2903
+  mse       : 15.1
+  psnr      : 36.98
+  lr        : 0.0001
+  ## epoch 152 averages:
+  loss      : 0.4408
+  bpp       : 0.2921
+  mse       : 15.31
+  psnr      : 36.9
+  lr        : 0.0001
+  ## epoch 153 averages:
+  loss      : 0.4374
+  bpp       : 0.2899
+  mse       : 15.19
+  psnr      : 36.97
+  lr        : 0.0001
+  ## epoch 154 averages:
+  loss      : 0.4382
+  bpp       : 0.2906
+  mse       : 15.2
+  psnr      : 36.93
+  lr        : 0.0001
+  ## epoch 155 averages:
+  loss      : 0.4382
+  bpp       : 0.2905
+  mse       : 15.21
+  psnr      : 36.96
+  lr        : 0.0001
+  ## epoch 156 averages:
+  loss      : 0.44
+  bpp       : 0.2913
+  mse       : 15.31
+  psnr      : 36.9
+  lr        : 0.0001
+  ## epoch 157 averages:
+  loss      : 0.4388
+  bpp       : 0.2906
+  mse       : 15.26
+  psnr      : 36.93
+  lr        : 0.0001
+  ## epoch 158 averages:
+  loss      : 0.4341
+  bpp       : 0.2886
+  mse       : 14.99
+  psnr      : 37.02
+  lr        : 0.0001
+  ## epoch 159 averages:
+  loss      : 0.4361
+  bpp       : 0.2899
+  mse       : 15.05
+  psnr      : 36.98
+  lr        : 0.0001
+  ## epoch 160 averages:
+  loss      : 0.4378
+  bpp       : 0.2899
+  mse       : 15.23
+  psnr      : 36.94
+  lr        : 0.0001
+  ## epoch 161 averages:
+  loss      : 0.4378
+  bpp       : 0.2904
+  mse       : 15.18
+  psnr      : 36.96
+  lr        : 0.0001
+  ## epoch 162 averages:
+  loss      : 0.4416
+  bpp       : 0.2921
+  mse       : 15.4
+  psnr      : 36.93
+  lr        : 0.0001
+  ## epoch 163 averages:
+  loss      : 0.4369
+  bpp       : 0.2902
+  mse       : 15.1
+  psnr      : 36.95
+  lr        : 0.0001
+  ## epoch 164 averages:
+  loss      : 0.4339
+  bpp       : 0.289
+  mse       : 14.92
+  psnr      : 37.03
+  lr        : 0.0001
+  ## epoch 165 averages:
+  loss      : 0.4369
+  bpp       : 0.2898
+  mse       : 15.15
+  psnr      : 36.98
+  lr        : 0.0001
+    ## eval averages:
+    loss      : 0.2593
+    bpp       : 0.1274
+    bpp_left  : 0.1511
+    bpp_right : 0.1037
+    mse       : 13.45
+    mse_left  : 13.78
+    mse_right : 13.11
+    psnr      : 37.39
+  ## epoch 166 averages:
+  loss      : 0.439
+  bpp       : 0.2915
+  mse       : 15.18
+  psnr      : 36.94
+  lr        : 0.0001
+  ## epoch 167 averages:
+  loss      : 0.4371
+  bpp       : 0.2902
+  mse       : 15.13
+  psnr      : 36.96
+  lr        : 0.0001
+  ## epoch 168 averages:
+  loss      : 0.4398
+  bpp       : 0.2919
+  mse       : 15.22
+  psnr      : 36.93
+  lr        : 0.0001
+  ## epoch 169 averages:
+  loss      : 0.4255
+  bpp       : 0.2877
+  mse       : 14.2
+  psnr      : 37.23
+  lr        : 1e-05
+  ## epoch 170 averages:
+  loss      : 0.422
+  bpp       : 0.2864
+  mse       : 13.99
+  psnr      : 37.3
+  lr        : 1e-05
+  ## epoch 171 averages:
+  loss      : 0.4246
+  bpp       : 0.2881
+  mse       : 14.08
+  psnr      : 37.28
+  lr        : 1e-05
+  ## epoch 172 averages:
+  loss      : 0.4223
+  bpp       : 0.2868
+  mse       : 13.98
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 173 averages:
+  loss      : 0.4227
+  bpp       : 0.2871
+  mse       : 13.98
+  psnr      : 37.3
+  lr        : 1e-05
+  ## epoch 174 averages:
+  loss      : 0.4253
+  bpp       : 0.2888
+  mse       : 14.08
+  psnr      : 37.25
+  lr        : 1e-05
+  ## epoch 175 averages:
+  loss      : 0.4221
+  bpp       : 0.2867
+  mse       : 13.96
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 176 averages:
+  loss      : 0.4216
+  bpp       : 0.2866
+  mse       : 13.92
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 177 averages:
+  loss      : 0.4227
+  bpp       : 0.2875
+  mse       : 13.95
+  psnr      : 37.31
+  lr        : 1e-05
+  ## epoch 178 averages:
+  loss      : 0.422
+  bpp       : 0.287
+  mse       : 13.92
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 179 averages:
+  loss      : 0.4227
+  bpp       : 0.2871
+  mse       : 13.98
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 180 averages:
+  loss      : 0.4216
+  bpp       : 0.2866
+  mse       : 13.92
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 181 averages:
+  loss      : 0.4191
+  bpp       : 0.2854
+  mse       : 13.79
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 182 averages:
+  loss      : 0.4194
+  bpp       : 0.2861
+  mse       : 13.75
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 183 averages:
+  loss      : 0.4229
+  bpp       : 0.2873
+  mse       : 13.99
+  psnr      : 37.31
+  lr        : 1e-05
+  ## epoch 184 averages:
+  loss      : 0.4219
+  bpp       : 0.2872
+  mse       : 13.89
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 185 averages:
+  loss      : 0.4261
+  bpp       : 0.2891
+  mse       : 14.13
+  psnr      : 37.27
+  lr        : 1e-05
+  ## epoch 186 averages:
+  loss      : 0.4239
+  bpp       : 0.2884
+  mse       : 13.98
+  psnr      : 37.28
+  lr        : 1e-05
+  ## epoch 187 averages:
+  loss      : 0.4206
+  bpp       : 0.2863
+  mse       : 13.85
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 188 averages:
+  loss      : 0.4188
+  bpp       : 0.2857
+  mse       : 13.74
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 189 averages:
+  loss      : 0.4226
+  bpp       : 0.2872
+  mse       : 13.96
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 190 averages:
+  loss      : 0.4207
+  bpp       : 0.2861
+  mse       : 13.88
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 191 averages:
+  loss      : 0.4214
+  bpp       : 0.287
+  mse       : 13.86
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 192 averages:
+  loss      : 0.4238
+  bpp       : 0.2878
+  mse       : 14.03
+  psnr      : 37.31
+  lr        : 1e-05
+  ## epoch 193 averages:
+  loss      : 0.4209
+  bpp       : 0.2868
+  mse       : 13.83
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 194 averages:
+  loss      : 0.4231
+  bpp       : 0.2873
+  mse       : 14.0
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 195 averages:
+  loss      : 0.4242
+  bpp       : 0.288
+  mse       : 14.04
+  psnr      : 37.31
+  lr        : 1e-05
+  ## epoch 196 averages:
+  loss      : 0.4214
+  bpp       : 0.2867
+  mse       : 13.89
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 197 averages:
+  loss      : 0.4193
+  bpp       : 0.2857
+  mse       : 13.79
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 198 averages:
+  loss      : 0.423
+  bpp       : 0.2876
+  mse       : 13.96
+  psnr      : 37.3
+  lr        : 1e-05
+    ## eval averages:
+    loss      : 0.2501
+    bpp       : 0.1247
+    bpp_left  : 0.1481
+    bpp_right : 0.1012
+    mse       : 12.79
+    mse_left  : 13.07
+    mse_right : 12.51
+    psnr      : 37.64
+  ## epoch 199 averages:
+  loss      : 0.4189
+  bpp       : 0.2856
+  mse       : 13.75
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 200 averages:
+  loss      : 0.4233
+  bpp       : 0.2877
+  mse       : 13.98
+  psnr      : 37.31
+  lr        : 1e-05
+  ## epoch 201 averages:
+  loss      : 0.4195
+  bpp       : 0.2861
+  mse       : 13.77
+  psnr      : 37.4
+  lr        : 1e-05
+  ## epoch 202 averages:
+  loss      : 0.4235
+  bpp       : 0.2878
+  mse       : 13.99
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 203 averages:
+  loss      : 0.4234
+  bpp       : 0.2875
+  mse       : 14.01
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 204 averages:
+  loss      : 0.4258
+  bpp       : 0.2884
+  mse       : 14.16
+  psnr      : 37.29
+  lr        : 1e-05
+  ## epoch 205 averages:
+  loss      : 0.42
+  bpp       : 0.2865
+  mse       : 13.77
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 206 averages:
+  loss      : 0.4233
+  bpp       : 0.2879
+  mse       : 13.97
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 207 averages:
+  loss      : 0.4203
+  bpp       : 0.2867
+  mse       : 13.78
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 208 averages:
+  loss      : 0.4221
+  bpp       : 0.287
+  mse       : 13.93
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 209 averages:
+  loss      : 0.4202
+  bpp       : 0.2864
+  mse       : 13.8
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 210 averages:
+  loss      : 0.4222
+  bpp       : 0.2873
+  mse       : 13.9
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 211 averages:
+  loss      : 0.4214
+  bpp       : 0.2868
+  mse       : 13.88
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 212 averages:
+  loss      : 0.421
+  bpp       : 0.2868
+  mse       : 13.84
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 213 averages:
+  loss      : 0.4245
+  bpp       : 0.2881
+  mse       : 14.06
+  psnr      : 37.29
+  lr        : 1e-05
+  ## epoch 214 averages:
+  loss      : 0.4228
+  bpp       : 0.2877
+  mse       : 13.94
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 215 averages:
+  loss      : 0.4218
+  bpp       : 0.2874
+  mse       : 13.86
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 216 averages:
+  loss      : 0.422
+  bpp       : 0.2872
+  mse       : 13.9
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 217 averages:
+  loss      : 0.4207
+  bpp       : 0.287
+  mse       : 13.78
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 218 averages:
+  loss      : 0.423
+  bpp       : 0.2874
+  mse       : 13.98
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 219 averages:
+  loss      : 0.4233
+  bpp       : 0.2877
+  mse       : 13.98
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 220 averages:
+  loss      : 0.4211
+  bpp       : 0.2868
+  mse       : 13.85
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 221 averages:
+  loss      : 0.4216
+  bpp       : 0.2872
+  mse       : 13.86
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 222 averages:
+  loss      : 0.4213
+  bpp       : 0.2868
+  mse       : 13.87
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 223 averages:
+  loss      : 0.4236
+  bpp       : 0.2884
+  mse       : 13.95
+  psnr      : 37.3
+  lr        : 1e-05
+  ## epoch 224 averages:
+  loss      : 0.4251
+  bpp       : 0.2888
+  mse       : 14.05
+  psnr      : 37.28
+  lr        : 1e-05
+  ## epoch 225 averages:
+  loss      : 0.4237
+  bpp       : 0.2881
+  mse       : 13.98
+  psnr      : 37.31
+  lr        : 1e-05
+  ## epoch 226 averages:
+  loss      : 0.422
+  bpp       : 0.2864
+  mse       : 13.98
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 227 averages:
+  loss      : 0.4216
+  bpp       : 0.2872
+  mse       : 13.86
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 228 averages:
+  loss      : 0.4232
+  bpp       : 0.288
+  mse       : 13.94
+  psnr      : 37.29
+  lr        : 1e-05
+  ## epoch 229 averages:
+  loss      : 0.421
+  bpp       : 0.2869
+  mse       : 13.83
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 230 averages:
+  loss      : 0.4208
+  bpp       : 0.287
+  mse       : 13.8
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 231 averages:
+  loss      : 0.423
+  bpp       : 0.2877
+  mse       : 13.96
+  psnr      : 37.32
+  lr        : 1e-05
+    ## eval averages:
+    loss      : 0.2492
+    bpp       : 0.1243
+    bpp_left  : 0.1471
+    bpp_right : 0.1015
+    mse       : 12.74
+    mse_left  : 12.97
+    mse_right : 12.51
+    psnr      : 37.63
+  ## epoch 232 averages:
+  loss      : 0.421
+  bpp       : 0.287
+  mse       : 13.81
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 233 averages:
+  loss      : 0.426
+  bpp       : 0.2888
+  mse       : 14.14
+  psnr      : 37.28
+  lr        : 1e-05
+  ## epoch 234 averages:
+  loss      : 0.4206
+  bpp       : 0.2867
+  mse       : 13.81
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 235 averages:
+  loss      : 0.4234
+  bpp       : 0.2877
+  mse       : 13.99
+  psnr      : 37.3
+  lr        : 1e-05
+  ## epoch 236 averages:
+  loss      : 0.4216
+  bpp       : 0.2872
+  mse       : 13.87
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 237 averages:
+  loss      : 0.4173
+  bpp       : 0.2852
+  mse       : 13.63
+  psnr      : 37.42
+  lr        : 1e-05
+  ## epoch 238 averages:
+  loss      : 0.4204
+  bpp       : 0.2865
+  mse       : 13.81
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 239 averages:
+  loss      : 0.4221
+  bpp       : 0.2878
+  mse       : 13.86
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 240 averages:
+  loss      : 0.4199
+  bpp       : 0.2864
+  mse       : 13.77
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 241 averages:
+  loss      : 0.4199
+  bpp       : 0.286
+  mse       : 13.81
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 242 averages:
+  loss      : 0.4211
+  bpp       : 0.287
+  mse       : 13.82
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 243 averages:
+  loss      : 0.42
+  bpp       : 0.2867
+  mse       : 13.75
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 244 averages:
+  loss      : 0.4209
+  bpp       : 0.2867
+  mse       : 13.84
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 245 averages:
+  loss      : 0.4236
+  bpp       : 0.288
+  mse       : 13.98
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 246 averages:
+  loss      : 0.4186
+  bpp       : 0.2862
+  mse       : 13.66
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 247 averages:
+  loss      : 0.4245
+  bpp       : 0.2884
+  mse       : 14.04
+  psnr      : 37.3
+  lr        : 1e-05
+  ## epoch 248 averages:
+  loss      : 0.4234
+  bpp       : 0.2877
+  mse       : 14.0
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 249 averages:
+  loss      : 0.4232
+  bpp       : 0.2878
+  mse       : 13.96
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 250 averages:
+  loss      : 0.419
+  bpp       : 0.2861
+  mse       : 13.7
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 251 averages:
+  loss      : 0.4194
+  bpp       : 0.2863
+  mse       : 13.73
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 252 averages:
+  loss      : 0.4188
+  bpp       : 0.2857
+  mse       : 13.72
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 253 averages:
+  loss      : 0.422
+  bpp       : 0.2869
+  mse       : 13.94
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 254 averages:
+  loss      : 0.4207
+  bpp       : 0.2869
+  mse       : 13.81
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 255 averages:
+  loss      : 0.4213
+  bpp       : 0.2872
+  mse       : 13.83
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 256 averages:
+  loss      : 0.4221
+  bpp       : 0.2872
+  mse       : 13.92
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 257 averages:
+  loss      : 0.4193
+  bpp       : 0.2864
+  mse       : 13.71
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 258 averages:
+  loss      : 0.4205
+  bpp       : 0.2867
+  mse       : 13.8
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 259 averages:
+  loss      : 0.4211
+  bpp       : 0.2867
+  mse       : 13.86
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 260 averages:
+  loss      : 0.4223
+  bpp       : 0.2878
+  mse       : 13.87
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 261 averages:
+  loss      : 0.423
+  bpp       : 0.2879
+  mse       : 13.94
+  psnr      : 37.31
+  lr        : 1e-05
+  ## epoch 262 averages:
+  loss      : 0.42
+  bpp       : 0.2866
+  mse       : 13.76
+  psnr      : 37.38
+  lr        : 1e-05
+  ## epoch 263 averages:
+  loss      : 0.4246
+  bpp       : 0.2883
+  mse       : 14.06
+  psnr      : 37.29
+  lr        : 1e-05
+  ## epoch 264 averages:
+  loss      : 0.4205
+  bpp       : 0.2869
+  mse       : 13.78
+  psnr      : 37.37
+  lr        : 1e-05
+    ## eval averages:
+    loss      : 0.2483
+    bpp       : 0.1243
+    bpp_left  : 0.1477
+    bpp_right : 0.1009
+    mse       : 12.65
+    mse_left  : 12.9
+    mse_right : 12.39
+    psnr      : 37.67
+  ## epoch 265 averages:
+  loss      : 0.4196
+  bpp       : 0.2864
+  mse       : 13.74
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 266 averages:
+  loss      : 0.4228
+  bpp       : 0.2877
+  mse       : 13.94
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 267 averages:
+  loss      : 0.4146
+  bpp       : 0.2845
+  mse       : 13.43
+  psnr      : 37.46
+  lr        : 1e-05
+  ## epoch 268 averages:
+  loss      : 0.4215
+  bpp       : 0.2874
+  mse       : 13.83
+  psnr      : 37.38
+  lr        : 1e-05
+  ## epoch 269 averages:
+  loss      : 0.4207
+  bpp       : 0.2867
+  mse       : 13.82
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 270 averages:
+  loss      : 0.4205
+  bpp       : 0.2863
+  mse       : 13.84
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 271 averages:
+  loss      : 0.4172
+  bpp       : 0.2853
+  mse       : 13.6
+  psnr      : 37.44
+  lr        : 1e-05
+  ## epoch 272 averages:
+  loss      : 0.4221
+  bpp       : 0.2876
+  mse       : 13.87
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 273 averages:
+  loss      : 0.4208
+  bpp       : 0.2869
+  mse       : 13.81
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 274 averages:
+  loss      : 0.4164
+  bpp       : 0.2852
+  mse       : 13.54
+  psnr      : 37.43
+  lr        : 1e-05
+  ## epoch 275 averages:
+  loss      : 0.4209
+  bpp       : 0.2866
+  mse       : 13.85
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 276 averages:
+  loss      : 0.4221
+  bpp       : 0.2874
+  mse       : 13.89
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 277 averages:
+  loss      : 0.4204
+  bpp       : 0.2863
+  mse       : 13.84
+  psnr      : 37.38
+  lr        : 1e-05
+  ## epoch 278 averages:
+  loss      : 0.424
+  bpp       : 0.2884
+  mse       : 13.99
+  psnr      : 37.31
+  lr        : 1e-05
+  ## epoch 279 averages:
+  loss      : 0.4204
+  bpp       : 0.2867
+  mse       : 13.79
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 280 averages:
+  loss      : 0.4187
+  bpp       : 0.2861
+  mse       : 13.68
+  psnr      : 37.4
+  lr        : 1e-05
+  ## epoch 281 averages:
+  loss      : 0.419
+  bpp       : 0.2864
+  mse       : 13.68
+  psnr      : 37.4
+  lr        : 1e-05
+  ## epoch 282 averages:
+  loss      : 0.4232
+  bpp       : 0.2878
+  mse       : 13.96
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 283 averages:
+  loss      : 0.423
+  bpp       : 0.2882
+  mse       : 13.9
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 284 averages:
+  loss      : 0.419
+  bpp       : 0.286
+  mse       : 13.72
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 285 averages:
+  loss      : 0.4177
+  bpp       : 0.2856
+  mse       : 13.62
+  psnr      : 37.4
+  lr        : 1e-05
+  ## epoch 286 averages:
+  loss      : 0.4205
+  bpp       : 0.287
+  mse       : 13.78
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 287 averages:
+  loss      : 0.4188
+  bpp       : 0.2861
+  mse       : 13.69
+  psnr      : 37.38
+  lr        : 1e-05
+  ## epoch 288 averages:
+  loss      : 0.4201
+  bpp       : 0.2869
+  mse       : 13.74
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 289 averages:
+  loss      : 0.4199
+  bpp       : 0.2865
+  mse       : 13.75
+  psnr      : 37.38
+  lr        : 1e-05
+  ## epoch 290 averages:
+  loss      : 0.4206
+  bpp       : 0.2869
+  mse       : 13.8
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 291 averages:
+  loss      : 0.4208
+  bpp       : 0.2874
+  mse       : 13.76
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 292 averages:
+  loss      : 0.4186
+  bpp       : 0.2857
+  mse       : 13.7
+  psnr      : 37.42
+  lr        : 1e-05
+  ## epoch 293 averages:
+  loss      : 0.42
+  bpp       : 0.2871
+  mse       : 13.71
+  psnr      : 37.38
+  lr        : 1e-05
+  ## epoch 294 averages:
+  loss      : 0.421
+  bpp       : 0.2865
+  mse       : 13.87
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 295 averages:
+  loss      : 0.4177
+  bpp       : 0.2856
+  mse       : 13.63
+  psnr      : 37.43
+  lr        : 1e-05
+  ## epoch 296 averages:
+  loss      : 0.421
+  bpp       : 0.2866
+  mse       : 13.87
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 297 averages:
+  loss      : 0.4192
+  bpp       : 0.2862
+  mse       : 13.72
+  psnr      : 37.4
+  lr        : 1e-05
+    ## eval averages:
+    loss      : 0.2534
+    bpp       : 0.1271
+    bpp_left  : 0.1501
+    bpp_right : 0.1041
+    mse       : 12.88
+    mse_left  : 13.15
+    mse_right : 12.62
+    psnr      : 37.57
+  ## epoch 298 averages:
+  loss      : 0.4214
+  bpp       : 0.2872
+  mse       : 13.84
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 299 averages:
+  loss      : 0.4187
+  bpp       : 0.2861
+  mse       : 13.68
+  psnr      : 37.41
+  lr        : 1e-05
+  ## epoch 300 averages:
+  loss      : 0.422
+  bpp       : 0.2874
+  mse       : 13.88
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 301 averages:
+  loss      : 0.4231
+  bpp       : 0.288
+  mse       : 13.93
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 302 averages:
+  loss      : 0.4175
+  bpp       : 0.2856
+  mse       : 13.61
+  psnr      : 37.42
+  lr        : 1e-05
+  ## epoch 303 averages:
+  loss      : 0.4239
+  bpp       : 0.2885
+  mse       : 13.96
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 304 averages:
+  loss      : 0.4205
+  bpp       : 0.2869
+  mse       : 13.78
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 305 averages:
+  loss      : 0.4216
+  bpp       : 0.2877
+  mse       : 13.81
+  psnr      : 37.36
+  lr        : 1e-05
+  ## epoch 306 averages:
+  loss      : 0.4228
+  bpp       : 0.288
+  mse       : 13.91
+  psnr      : 37.33
+  lr        : 1e-05
+  ## epoch 307 averages:
+  loss      : 0.42
+  bpp       : 0.2867
+  mse       : 13.75
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 308 averages:
+  loss      : 0.4224
+  bpp       : 0.2877
+  mse       : 13.89
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 309 averages:
+  loss      : 0.4239
+  bpp       : 0.2883
+  mse       : 13.98
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 310 averages:
+  loss      : 0.4209
+  bpp       : 0.2868
+  mse       : 13.83
+  psnr      : 37.4
+  lr        : 1e-05
+  ## epoch 311 averages:
+  loss      : 0.4226
+  bpp       : 0.2879
+  mse       : 13.89
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 312 averages:
+  loss      : 0.4219
+  bpp       : 0.2873
+  mse       : 13.88
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 313 averages:
+  loss      : 0.4213
+  bpp       : 0.2874
+  mse       : 13.81
+  psnr      : 37.35
+  lr        : 1e-05
+  ## epoch 314 averages:
+  loss      : 0.4187
+  bpp       : 0.286
+  mse       : 13.69
+  psnr      : 37.41
+  lr        : 1e-05
+  ## epoch 315 averages:
+  loss      : 0.4224
+  bpp       : 0.2878
+  mse       : 13.88
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 316 averages:
+  loss      : 0.4239
+  bpp       : 0.2886
+  mse       : 13.96
+  psnr      : 37.31
+  lr        : 1e-05
+  ## epoch 317 averages:
+  loss      : 0.4217
+  bpp       : 0.2872
+  mse       : 13.86
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 318 averages:
+  loss      : 0.4194
+  bpp       : 0.2861
+  mse       : 13.75
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 319 averages:
+  loss      : 0.4183
+  bpp       : 0.2858
+  mse       : 13.67
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 320 averages:
+  loss      : 0.4181
+  bpp       : 0.2859
+  mse       : 13.63
+  psnr      : 37.42
+  lr        : 1e-05
+  ## epoch 321 averages:
+  loss      : 0.4191
+  bpp       : 0.2867
+  mse       : 13.66
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 322 averages:
+  loss      : 0.4156
+  bpp       : 0.2851
+  mse       : 13.47
+  psnr      : 37.45
+  lr        : 1e-05
+  ## epoch 323 averages:
+  loss      : 0.4213
+  bpp       : 0.2874
+  mse       : 13.81
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 324 averages:
+  loss      : 0.4228
+  bpp       : 0.288
+  mse       : 13.91
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 325 averages:
+  loss      : 0.4242
+  bpp       : 0.288
+  mse       : 14.04
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 326 averages:
+  loss      : 0.4239
+  bpp       : 0.2885
+  mse       : 13.96
+  psnr      : 37.32
+  lr        : 1e-05
+  ## epoch 327 averages:
+  loss      : 0.4195
+  bpp       : 0.2859
+  mse       : 13.78
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 328 averages:
+  loss      : 0.423
+  bpp       : 0.288
+  mse       : 13.93
+  psnr      : 37.34
+  lr        : 1e-05
+  ## epoch 329 averages:
+  loss      : 0.4186
+  bpp       : 0.2864
+  mse       : 13.64
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 330 averages:
+  loss      : 0.4224
+  bpp       : 0.2881
+  mse       : 13.85
+  psnr      : 37.35
+  lr        : 1e-05
+    ## eval averages:
+    loss      : 0.2478
+    bpp       : 0.1247
+    bpp_left  : 0.1479
+    bpp_right : 0.1014
+    mse       : 12.56
+    mse_left  : 12.79
+    mse_right : 12.32
+    psnr      : 37.67
+  ## epoch 331 averages:
+  loss      : 0.4212
+  bpp       : 0.2873
+  mse       : 13.81
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 332 averages:
+  loss      : 0.421
+  bpp       : 0.2869
+  mse       : 13.82
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 333 averages:
+  loss      : 0.4207
+  bpp       : 0.2871
+  mse       : 13.78
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 334 averages:
+  loss      : 0.4197
+  bpp       : 0.2868
+  mse       : 13.71
+  psnr      : 37.39
+  lr        : 1e-05
+  ## epoch 335 averages:
+  loss      : 0.4201
+  bpp       : 0.2869
+  mse       : 13.74
+  psnr      : 37.37
+  lr        : 1e-05
+  ## epoch 336 averages:
+  loss      : 0.4182
+  bpp       : 0.286
+  mse       : 13.63
+  psnr      : 37.43
+  lr        : 1e-05
+  ## epoch 337 averages:
+  loss      : 0.4187
+  bpp       : 0.2861
+  mse       : 13.68
+  psnr      : 37.42
+  lr        : 1e-06
+  ## epoch 338 averages:
+  loss      : 0.4161
+  bpp       : 0.2852
+  mse       : 13.5
+  psnr      : 37.46
+  lr        : 1e-06
+  ## epoch 339 averages:
+  loss      : 0.418
+  bpp       : 0.2862
+  mse       : 13.59
+  psnr      : 37.42
+  lr        : 1e-06
+  ## epoch 340 averages:
+  loss      : 0.4181
+  bpp       : 0.2856
+  mse       : 13.67
+  psnr      : 37.44
+  lr        : 1e-06
+  ## epoch 341 averages:
+  loss      : 0.4206
+  bpp       : 0.2872
+  mse       : 13.76
+  psnr      : 37.37
+  lr        : 1e-06
+  ## epoch 342 averages:
+  loss      : 0.4184
+  bpp       : 0.2862
+  mse       : 13.64
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 343 averages:
+  loss      : 0.4179
+  bpp       : 0.2861
+  mse       : 13.6
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 344 averages:
+  loss      : 0.4181
+  bpp       : 0.2861
+  mse       : 13.62
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 345 averages:
+  loss      : 0.4174
+  bpp       : 0.2859
+  mse       : 13.57
+  psnr      : 37.45
+  lr        : 1e-06
+  ## epoch 346 averages:
+  loss      : 0.4174
+  bpp       : 0.2856
+  mse       : 13.59
+  psnr      : 37.44
+  lr        : 1e-06
+  ## epoch 347 averages:
+  loss      : 0.4187
+  bpp       : 0.2864
+  mse       : 13.65
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 348 averages:
+  loss      : 0.4226
+  bpp       : 0.2881
+  mse       : 13.88
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 349 averages:
+  loss      : 0.4153
+  bpp       : 0.2851
+  mse       : 13.44
+  psnr      : 37.46
+  lr        : 1e-06
+  ## epoch 350 averages:
+  loss      : 0.4202
+  bpp       : 0.2869
+  mse       : 13.75
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 351 averages:
+  loss      : 0.4178
+  bpp       : 0.2857
+  mse       : 13.62
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 352 averages:
+  loss      : 0.4207
+  bpp       : 0.2874
+  mse       : 13.76
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 353 averages:
+  loss      : 0.4244
+  bpp       : 0.2888
+  mse       : 13.98
+  psnr      : 37.32
+  lr        : 1e-06
+  ## epoch 354 averages:
+  loss      : 0.4198
+  bpp       : 0.2864
+  mse       : 13.75
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 355 averages:
+  loss      : 0.4182
+  bpp       : 0.286
+  mse       : 13.63
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 356 averages:
+  loss      : 0.4218
+  bpp       : 0.2878
+  mse       : 13.82
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 357 averages:
+  loss      : 0.4227
+  bpp       : 0.2882
+  mse       : 13.87
+  psnr      : 37.35
+  lr        : 1e-06
+  ## epoch 358 averages:
+  loss      : 0.4208
+  bpp       : 0.2873
+  mse       : 13.77
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 359 averages:
+  loss      : 0.4209
+  bpp       : 0.2872
+  mse       : 13.8
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 360 averages:
+  loss      : 0.4186
+  bpp       : 0.2861
+  mse       : 13.67
+  psnr      : 37.42
+  lr        : 1e-06
+  ## epoch 361 averages:
+  loss      : 0.4199
+  bpp       : 0.2871
+  mse       : 13.7
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 362 averages:
+  loss      : 0.4174
+  bpp       : 0.2855
+  mse       : 13.6
+  psnr      : 37.46
+  lr        : 1e-06
+  ## epoch 363 averages:
+  loss      : 0.4209
+  bpp       : 0.2877
+  mse       : 13.75
+  psnr      : 37.38
+  lr        : 1e-06
+    ## eval averages:
+    loss      : 0.2476
+    bpp       : 0.1238
+    bpp_left  : 0.1474
+    bpp_right : 0.1002
+    mse       : 12.63
+    mse_left  : 12.88
+    mse_right : 12.38
+    psnr      : 37.69
+  ## epoch 364 averages:
+  loss      : 0.4198
+  bpp       : 0.2868
+  mse       : 13.72
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 365 averages:
+  loss      : 0.42
+  bpp       : 0.2867
+  mse       : 13.75
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 366 averages:
+  loss      : 0.4222
+  bpp       : 0.2878
+  mse       : 13.86
+  psnr      : 37.37
+  lr        : 1e-06
+  ## epoch 367 averages:
+  loss      : 0.4219
+  bpp       : 0.2874
+  mse       : 13.87
+  psnr      : 37.33
+  lr        : 1e-06
+  ## epoch 368 averages:
+  loss      : 0.4171
+  bpp       : 0.286
+  mse       : 13.54
+  psnr      : 37.45
+  lr        : 1e-06
+  ## epoch 369 averages:
+  loss      : 0.4156
+  bpp       : 0.2847
+  mse       : 13.5
+  psnr      : 37.48
+  lr        : 1e-06
+  ## epoch 370 averages:
+  loss      : 0.4216
+  bpp       : 0.2876
+  mse       : 13.83
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 371 averages:
+  loss      : 0.4196
+  bpp       : 0.2869
+  mse       : 13.69
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 372 averages:
+  loss      : 0.4202
+  bpp       : 0.2871
+  mse       : 13.73
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 373 averages:
+  loss      : 0.42
+  bpp       : 0.2868
+  mse       : 13.74
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 374 averages:
+  loss      : 0.4208
+  bpp       : 0.2876
+  mse       : 13.74
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 375 averages:
+  loss      : 0.4174
+  bpp       : 0.2857
+  mse       : 13.58
+  psnr      : 37.45
+  lr        : 1e-06
+  ## epoch 376 averages:
+  loss      : 0.4189
+  bpp       : 0.2866
+  mse       : 13.65
+  psnr      : 37.42
+  lr        : 1e-06
+  ## epoch 377 averages:
+  loss      : 0.4212
+  bpp       : 0.2875
+  mse       : 13.79
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 378 averages:
+  loss      : 0.421
+  bpp       : 0.2874
+  mse       : 13.78
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 379 averages:
+  loss      : 0.4177
+  bpp       : 0.2861
+  mse       : 13.58
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 380 averages:
+  loss      : 0.4203
+  bpp       : 0.2872
+  mse       : 13.74
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 381 averages:
+  loss      : 0.4202
+  bpp       : 0.2867
+  mse       : 13.76
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 382 averages:
+  loss      : 0.4211
+  bpp       : 0.2876
+  mse       : 13.78
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 383 averages:
+  loss      : 0.4183
+  bpp       : 0.2862
+  mse       : 13.62
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 384 averages:
+  loss      : 0.42
+  bpp       : 0.2871
+  mse       : 13.71
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 385 averages:
+  loss      : 0.4173
+  bpp       : 0.2853
+  mse       : 13.62
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 386 averages:
+  loss      : 0.4238
+  bpp       : 0.2885
+  mse       : 13.95
+  psnr      : 37.32
+  lr        : 1e-06
+  ## epoch 387 averages:
+  loss      : 0.419
+  bpp       : 0.2866
+  mse       : 13.66
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 388 averages:
+  loss      : 0.4176
+  bpp       : 0.286
+  mse       : 13.58
+  psnr      : 37.44
+  lr        : 1e-06
+  ## epoch 389 averages:
+  loss      : 0.4235
+  bpp       : 0.2887
+  mse       : 13.9
+  psnr      : 37.33
+  lr        : 1e-06
+  ## epoch 390 averages:
+  loss      : 0.4219
+  bpp       : 0.2881
+  mse       : 13.8
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 391 averages:
+  loss      : 0.4184
+  bpp       : 0.2865
+  mse       : 13.61
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 392 averages:
+  loss      : 0.4208
+  bpp       : 0.2874
+  mse       : 13.76
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 393 averages:
+  loss      : 0.4188
+  bpp       : 0.2863
+  mse       : 13.67
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 394 averages:
+  loss      : 0.4205
+  bpp       : 0.2872
+  mse       : 13.75
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 395 averages:
+  loss      : 0.4211
+  bpp       : 0.2878
+  mse       : 13.75
+  psnr      : 37.37
+  lr        : 1e-06
+  ## epoch 396 averages:
+  loss      : 0.4215
+  bpp       : 0.2875
+  mse       : 13.82
+  psnr      : 37.38
+  lr        : 1e-06
+    ## eval averages:
+    loss      : 0.246
+    bpp       : 0.1232
+    bpp_left  : 0.1459
+    bpp_right : 0.1006
+    mse       : 12.52
+    mse_left  : 12.74
+    mse_right : 12.3
+    psnr      : 37.73
+  ## epoch 397 averages:
+  loss      : 0.4189
+  bpp       : 0.2865
+  mse       : 13.66
+  psnr      : 37.42
+  lr        : 1e-06
+  ## epoch 398 averages:
+  loss      : 0.4166
+  bpp       : 0.2856
+  mse       : 13.52
+  psnr      : 37.45
+  lr        : 1e-06
+  ## epoch 399 averages:
+  loss      : 0.4181
+  bpp       : 0.2864
+  mse       : 13.59
+  psnr      : 37.44
+  lr        : 1e-06
+  ## epoch 400 averages:
+  loss      : 0.4202
+  bpp       : 0.2872
+  mse       : 13.72
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 401 averages:
+  loss      : 0.4213
+  bpp       : 0.2876
+  mse       : 13.79
+  psnr      : 37.37
+  lr        : 1e-06
+  ## epoch 402 averages:
+  loss      : 0.4181
+  bpp       : 0.2861
+  mse       : 13.62
+  psnr      : 37.44
+  lr        : 1e-06
+  ## epoch 403 averages:
+  loss      : 0.4198
+  bpp       : 0.2869
+  mse       : 13.71
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 404 averages:
+  loss      : 0.423
+  bpp       : 0.2883
+  mse       : 13.9
+  psnr      : 37.35
+  lr        : 1e-06
+  ## epoch 405 averages:
+  loss      : 0.4188
+  bpp       : 0.2863
+  mse       : 13.67
+  psnr      : 37.42
+  lr        : 1e-06
+  ## epoch 406 averages:
+  loss      : 0.4194
+  bpp       : 0.2864
+  mse       : 13.72
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 407 averages:
+  loss      : 0.4174
+  bpp       : 0.2859
+  mse       : 13.57
+  psnr      : 37.42
+  lr        : 1e-06
+  ## epoch 408 averages:
+  loss      : 0.4181
+  bpp       : 0.2861
+  mse       : 13.62
+  psnr      : 37.45
+  lr        : 1e-06
+  ## epoch 409 averages:
+  loss      : 0.4212
+  bpp       : 0.2875
+  mse       : 13.8
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 410 averages:
+  loss      : 0.4222
+  bpp       : 0.2882
+  mse       : 13.82
+  psnr      : 37.37
+  lr        : 1e-06
+  ## epoch 411 averages:
+  loss      : 0.4212
+  bpp       : 0.2875
+  mse       : 13.79
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 412 averages:
+  loss      : 0.4193
+  bpp       : 0.2864
+  mse       : 13.7
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 413 averages:
+  loss      : 0.4201
+  bpp       : 0.2867
+  mse       : 13.76
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 414 averages:
+  loss      : 0.4182
+  bpp       : 0.2862
+  mse       : 13.61
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 415 averages:
+  loss      : 0.42
+  bpp       : 0.2877
+  mse       : 13.66
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 416 averages:
+  loss      : 0.4196
+  bpp       : 0.2869
+  mse       : 13.69
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 417 averages:
+  loss      : 0.4205
+  bpp       : 0.2873
+  mse       : 13.73
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 418 averages:
+  loss      : 0.4204
+  bpp       : 0.2866
+  mse       : 13.8
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 419 averages:
+  loss      : 0.4201
+  bpp       : 0.2871
+  mse       : 13.72
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 420 averages:
+  loss      : 0.4235
+  bpp       : 0.2884
+  mse       : 13.94
+  psnr      : 37.34
+  lr        : 1e-06
+  ## epoch 421 averages:
+  loss      : 0.424
+  bpp       : 0.2887
+  mse       : 13.96
+  psnr      : 37.33
+  lr        : 1e-06
+  ## epoch 422 averages:
+  loss      : 0.4173
+  bpp       : 0.2859
+  mse       : 13.56
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 423 averages:
+  loss      : 0.419
+  bpp       : 0.2865
+  mse       : 13.67
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 424 averages:
+  loss      : 0.4194
+  bpp       : 0.2868
+  mse       : 13.68
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 425 averages:
+  loss      : 0.4224
+  bpp       : 0.2882
+  mse       : 13.85
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 426 averages:
+  loss      : 0.4201
+  bpp       : 0.2868
+  mse       : 13.75
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 427 averages:
+  loss      : 0.4212
+  bpp       : 0.2874
+  mse       : 13.8
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 428 averages:
+  loss      : 0.422
+  bpp       : 0.2881
+  mse       : 13.81
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 429 averages:
+  loss      : 0.4199
+  bpp       : 0.2869
+  mse       : 13.72
+  psnr      : 37.41
+  lr        : 1e-06
+    ## eval averages:
+    loss      : 0.2489
+    bpp       : 0.1253
+    bpp_left  : 0.1481
+    bpp_right : 0.1024
+    mse       : 12.61
+    mse_left  : 12.82
+    mse_right : 12.4
+    psnr      : 37.65
+  ## epoch 430 averages:
+  loss      : 0.4235
+  bpp       : 0.2884
+  mse       : 13.93
+  psnr      : 37.33
+  lr        : 1e-06
+  ## epoch 431 averages:
+  loss      : 0.416
+  bpp       : 0.2853
+  mse       : 13.48
+  psnr      : 37.48
+  lr        : 1e-06
+  ## epoch 432 averages:
+  loss      : 0.4202
+  bpp       : 0.2868
+  mse       : 13.77
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 433 averages:
+  loss      : 0.4182
+  bpp       : 0.2864
+  mse       : 13.6
+  psnr      : 37.44
+  lr        : 1e-06
+  ## epoch 434 averages:
+  loss      : 0.4231
+  bpp       : 0.2882
+  mse       : 13.91
+  psnr      : 37.35
+  lr        : 1e-06
+  ## epoch 435 averages:
+  loss      : 0.4194
+  bpp       : 0.2868
+  mse       : 13.69
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 436 averages:
+  loss      : 0.4231
+  bpp       : 0.2885
+  mse       : 13.88
+  psnr      : 37.34
+  lr        : 1e-06
+  ## epoch 437 averages:
+  loss      : 0.4211
+  bpp       : 0.2877
+  mse       : 13.76
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 438 averages:
+  loss      : 0.4201
+  bpp       : 0.2873
+  mse       : 13.71
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 439 averages:
+  loss      : 0.4191
+  bpp       : 0.2866
+  mse       : 13.67
+  psnr      : 37.42
+  lr        : 1e-06
+  ## epoch 440 averages:
+  loss      : 0.4126
+  bpp       : 0.2836
+  mse       : 13.32
+  psnr      : 37.52
+  lr        : 1e-06
+  ## epoch 441 averages:
+  loss      : 0.4198
+  bpp       : 0.287
+  mse       : 13.69
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 442 averages:
+  loss      : 0.4208
+  bpp       : 0.287
+  mse       : 13.8
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 443 averages:
+  loss      : 0.4192
+  bpp       : 0.2864
+  mse       : 13.7
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 444 averages:
+  loss      : 0.4198
+  bpp       : 0.2872
+  mse       : 13.68
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 445 averages:
+  loss      : 0.421
+  bpp       : 0.2878
+  mse       : 13.73
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 446 averages:
+  loss      : 0.4216
+  bpp       : 0.2879
+  mse       : 13.79
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 447 averages:
+  loss      : 0.4215
+  bpp       : 0.2879
+  mse       : 13.78
+  psnr      : 37.38
+  lr        : 1e-06
+  ## epoch 448 averages:
+  loss      : 0.4192
+  bpp       : 0.2869
+  mse       : 13.64
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 449 averages:
+  loss      : 0.4201
+  bpp       : 0.2872
+  mse       : 13.71
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 450 averages:
+  loss      : 0.4205
+  bpp       : 0.2873
+  mse       : 13.74
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 451 averages:
+  loss      : 0.4198
+  bpp       : 0.2868
+  mse       : 13.72
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 452 averages:
+  loss      : 0.4229
+  bpp       : 0.2881
+  mse       : 13.9
+  psnr      : 37.34
+  lr        : 1e-06
+  ## epoch 453 averages:
+  loss      : 0.4173
+  bpp       : 0.2861
+  mse       : 13.54
+  psnr      : 37.44
+  lr        : 1e-06
+  ## epoch 454 averages:
+  loss      : 0.4189
+  bpp       : 0.2867
+  mse       : 13.64
+  psnr      : 37.41
+  lr        : 1e-06
+  ## epoch 455 averages:
+  loss      : 0.4189
+  bpp       : 0.2865
+  mse       : 13.66
+  psnr      : 37.42
+  lr        : 1e-06
+  ## epoch 456 averages:
+  loss      : 0.4159
+  bpp       : 0.2851
+  mse       : 13.5
+  psnr      : 37.46
+  lr        : 1e-06
+  ## epoch 457 averages:
+  loss      : 0.4197
+  bpp       : 0.287
+  mse       : 13.7
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 458 averages:
+  loss      : 0.4189
+  bpp       : 0.2868
+  mse       : 13.63
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 459 averages:
+  loss      : 0.4161
+  bpp       : 0.2855
+  mse       : 13.48
+  psnr      : 37.47
+  lr        : 1e-06
+  ## epoch 460 averages:
+  loss      : 0.4192
+  bpp       : 0.2861
+  mse       : 13.73
+  psnr      : 37.45
+  lr        : 1e-06
+  ## epoch 461 averages:
+  loss      : 0.4216
+  bpp       : 0.2872
+  mse       : 13.86
+  psnr      : 37.36
+  lr        : 1e-06
+  ## epoch 462 averages:
+  loss      : 0.419
+  bpp       : 0.287
+  mse       : 13.62
+  psnr      : 37.4
+  lr        : 1e-06
+    ## eval averages:
+    loss      : 0.2475
+    bpp       : 0.1242
+    bpp_left  : 0.1472
+    bpp_right : 0.1013
+    mse       : 12.57
+    mse_left  : 12.81
+    mse_right : 12.33
+    psnr      : 37.68
+  ## epoch 463 averages:
+  loss      : 0.4193
+  bpp       : 0.2865
+  mse       : 13.7
+  psnr      : 37.4
+  lr        : 1e-06
+  ## epoch 464 averages:
+  loss      : 0.419
+  bpp       : 0.2863
+  mse       : 13.69
+  psnr      : 37.43
+  lr        : 1e-06
+  ## epoch 465 averages:
+  loss      : 0.4213
+  bpp       : 0.2875
+  mse       : 13.8
+  psnr      : 37.39
+  lr        : 1e-06
+  ## epoch 466 averages:
+  loss      : 0.4233
+  bpp       : 0.2887
+  mse       : 13.89
+  psnr      : 37.35
+  lr        : 1e-06

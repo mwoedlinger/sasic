@@ -33,7 +33,7 @@ c = Dict(
                     transforms.RandomCrop((256, 256))],
                 kwargs={'debug': False}),
     EVAL = Dict(
-                name='cityscapes#test', 
+                name='cityscapes#eval', 
                 transform=[
                     CropCityscapesArtefacts(),
                     transforms.RandomCrop((256, 256))

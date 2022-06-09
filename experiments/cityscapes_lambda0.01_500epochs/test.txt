@@ -1,0 +1,9 @@
+
+## cityscapes#test test averages:
+    bpp       : 0.1169
+    bpp_left  : 0.1314
+    bpp_right : 0.1023
+    mse       : 11.48
+    mse_left  : 11.78
+    mse_right : 11.19
+    psnr      : 37.67
