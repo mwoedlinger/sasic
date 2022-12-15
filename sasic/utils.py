@@ -4,6 +4,27 @@ import torch
 import torch.nn.functional as F
 from skimage import morphology
 import numpy as np
+import os
+
+def get_free_gpu(memory=3000):
+    a = os.popen(
+        "/usr/bin/nvidia-smi | grep 'MiB /' | awk '{print $9}' | sed -e 's/MiB//'")
+
+    used_memory = []
+    while 1:
+        line = a.readline()
+        if not line:
+            break
+        used_memory.append(int(line))
+
+    gpu = np.argmin(used_memory)
+    if used_memory[gpu] < memory:
+        print(f'## Using gpu with {used_memory[gpu]}MB memory usage')
+        return gpu.item()
+
+    print('No free GPU available.')
+    exit(1)
+
 
 def calc_bpp(rate, image):
 	H, W = image.shape[-2:]

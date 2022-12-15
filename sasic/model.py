@@ -309,10 +309,10 @@ class StereoEncoderDecoder(nn.Module):
 
 		if not training:
 			warp_dict = Dict(y_right_from_left=y_right_from_left, shift=shift)
-			output = Dict(pred_left=x_hat_left, rate_left=out_left.rate, latents_left=out_left.latents, warp=warp_dict,
+			output = Dict(pred_left=x_hat_left, rate_left=out_left.rate, latents_left=out_left.latents, warp=warp_dict, shift=shift,
 						pred_right=x_hat_right, rate_right=out_right.rate, latents_right=out_right.latents)
 		else:
-			output = Dict(pred_left=x_hat_left, rate_left=out_left.rate, latents_left=out_left.latents,
+			output = Dict(pred_left=x_hat_left, rate_left=out_left.rate, latents_left=out_left.latents, shift=shift,
 						pred_right=x_hat_right, rate_right=out_right.rate, latents_right=out_right.latents)
 
 		return output
