@@ -24,6 +24,18 @@ Test a model with test.py. Example:
 
 where `RESUME` points to a directory that contains a trained `model.pt` file (in the training example above `RESUME` would be set to `experiments/EXP_NAME-HASH`). A pre-trained model for the cityscapes dataset and lambda=0.01 is included in `experiments/cityscapes_lambda0.01_500epochs`.
 
+## Encoding/decoding
+To save the compressed stereo image pair in a bitstream use the encode.py and decode.py python scripts.
+Encoding example:
+
+```python encode.py --gpu --left /path/to/left.png --right /path/to/right.png --output_filename bitstream_filename --model /path/to/model.pt```
+
+Decoding example:
+
+```python decode.py --gpu --image_filename /path/to/bitstream_filename --output_left output_left --output_right output_right --model /path/to/model.pt```
+
+We provide a model pretrained on Cityscapes in experiments/cityscapes_lambda0.01_500epochs/model.pt.
+
 ## Examples
 ![image](./assets/cityscapes_example-01.png "Qualitative comparison for a sample from the Cityscapes dataset")
 ![image](./assets/instereo_example-02.png "Qualitative comparison for a sample from the InStereo2k dataset")
