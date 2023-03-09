@@ -96,8 +96,9 @@ class Encoder:
         xl = left.to(self.device)
         xr = right.to(self.device)
 
-        self.model.eval()
-        out = self.model(xl, xr, False)
+        with torch.no_grad():
+            self.model.eval()
+            out = self.model(xl, xr, False)
 
         shift = out.shift 
 
@@ -143,8 +144,8 @@ class Encoder:
             dict: a dictionary containing the encoded latent and hyperlatent as well as the hyperlatent shape
                   as well as the vocabulary parameter L.
         """
-        left_tensor = CenterCrop(512)(ToTensor()(left)).unsqueeze(0)
-        right_tensor =  CenterCrop(512)(ToTensor()(right)).unsqueeze(0)
+        left_tensor = ToTensor()(left).unsqueeze(0)
+        right_tensor =  ToTensor()(right).unsqueeze(0)
 
         return self.encode_tensor(left_tensor, right_tensor, filename)
 
@@ -157,12 +158,12 @@ class Encoder:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--left', type=str)
-    parser.add_argument('--right', type=str)
-    parser.add_argument('--output_filename', type=str, help='output filename')
+    parser.add_argument('--left', type=str, required=True)
+    parser.add_argument('--right', type=str, required=True)
+    parser.add_argument('--output_filename', type=str, default='out.sasic', help='output filename')
     parser.add_argument(
-        '--model', type=str, help='A trained pytorch compression model.', default='model.pt')
-    parser.add_argument('--L', type=int, help='Vocabulary size.', default=10)
+        '--model', type=str, help='A trained pytorch compression model.', required=True)
+    parser.add_argument('--L', type=int, help='Vocabulary size.', default=50)
     parser.add_argument("--gpu", action='store_true', help="Use gpu?")
     args = parser.parse_args()
 
@@ -173,7 +174,7 @@ if __name__ == '__main__':
     print(f'  ## Using device: {device}')
 
     model = StereoEncoderDecoder().to(device)
-    model.load_state_dict(torch.load(args.model))
+    model.load_state_dict(torch.load(args.model, map_location=device))
     model.eval()
 
     enc = Encoder(model=model, device=device, L=args.L)

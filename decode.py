@@ -89,53 +89,54 @@ class Decoder:
         Returns:
             torch.tensor: decoded torch.tensor
         """
-        with open(filename, 'rb') as f:
-            byte_dict = pickle.load(f)
+        with torch.no_grad():
+            with open(filename, 'rb') as f:
+                byte_dict = pickle.load(f)
 
-        yl_bytes = byte_dict['yl']
-        zl_bytes = byte_dict['zl']
-        yr_bytes = byte_dict['yr']
-        zr_bytes = byte_dict['zr']
-        shift = byte_dict['shift']
-        z_shape = byte_dict['z_shape']
-        L = byte_dict['L']
+            yl_bytes = byte_dict['yl']
+            zl_bytes = byte_dict['zl']
+            yr_bytes = byte_dict['yr']
+            zr_bytes = byte_dict['zr']
+            shift = byte_dict['shift']
+            z_shape = byte_dict['z_shape']
+            L = byte_dict['L']
 
-        zl_loc = self.zl_loc.expand(z_shape)
-        zr_loc = self.zr_loc.expand(z_shape)
-        zl_scale = self.zl_scale.expand(z_shape)
-        zr_scale = self.zr_scale.expand(z_shape) 
-        
-        zl_quant = self._dec(zl_bytes, zl_loc.cpu(), zl_scale.cpu(), L).to(self.device)
-        yl_probs = self.hd_left(zl_quant)
-        yl_loc, yl_scale = torch.chunk(yl_probs, 2, dim=1)
-        yl_quant = self._dec(yl_bytes, yl_loc.cpu(), yl_scale.cpu(), L).to(self.device)
-        
-        y_right_from_left = left_to_right(yl_quant, shift)
+            zl_loc = self.zl_loc.expand(z_shape)
+            zr_loc = self.zr_loc.expand(z_shape)
+            zl_scale = self.zl_scale.expand(z_shape)
+            zr_scale = self.zr_scale.expand(z_shape) 
+            
+            zl_quant = self._dec(zl_bytes, zl_loc.cpu(), zl_scale.cpu(), L).to(self.device)
+            yl_probs = self.hd_left(zl_quant)
+            yl_loc, yl_scale = torch.chunk(yl_probs, 2, dim=1)
+            yl_quant = self._dec(yl_bytes, yl_loc.cpu(), yl_scale.cpu(), L).to(self.device)
+            
+            y_right_from_left = left_to_right(yl_quant, shift)
 
-        zr_quant = self._dec(zr_bytes, zr_loc.cpu(), zr_scale.cpu(), L).to(self.device)
-        zr_upscaled = nn.functional.interpolate(zr_quant, size=yl_quant.shape[-2:], mode='nearest')
-        hd_right_in = torch.cat([y_right_from_left, zr_upscaled], dim=1)
-        yr_probs = self.hd_right(hd_right_in)
-        yr_loc, yr_scale = torch.chunk(yr_probs, 2, dim=1)     
+            zr_quant = self._dec(zr_bytes, zr_loc.cpu(), zr_scale.cpu(), L).to(self.device)
+            zr_upscaled = nn.functional.interpolate(zr_quant, size=yl_quant.shape[-2:], mode='nearest')
+            hd_right_in = torch.cat([y_right_from_left, zr_upscaled], dim=1)
+            yr_probs = self.hd_right(hd_right_in)
+            yr_loc, yr_scale = torch.chunk(yr_probs, 2, dim=1)     
 
-        yr_quant_res = self._dec(yr_bytes, yr_loc.cpu(), yr_scale.cpu(), L).to(self.device)
-        yr_quant = yr_quant_res + y_right_from_left
+            yr_quant_res = self._dec(yr_bytes, yr_loc.cpu(), yr_scale.cpu(), L).to(self.device)
+            yr_quant = yr_quant_res + y_right_from_left
 
-        yl_quant = yl_quant.to(device)
-        yr_quant = yr_quant.to(device)
+            yl_quant = yl_quant.to(device)
+            yr_quant = yr_quant.to(device)
 
-        # decode left and right
-        l_left, l_right = self.sam1(yl_quant, yr_quant)
-        l_left = self.decoder_left1(l_left)
-        l_right = self.decoder_right1(l_right)
+            # decode left and right
+            l_left, l_right = self.sam1(yl_quant, yr_quant)
+            l_left = self.decoder_left1(l_left)
+            l_right = self.decoder_right1(l_right)
 
-        l_left, l_right = self.sam2(l_left, l_right)
-        l_left = self.decoder_left2(l_left)
-        l_right = self.decoder_right2(l_right)
+            l_left, l_right = self.sam2(l_left, l_right)
+            l_left = self.decoder_left2(l_left)
+            l_right = self.decoder_right2(l_right)
 
-        l_left, l_right = self.sam3(l_left, l_right)
-        x_hat_left = self.decoder_left3(l_left)
-        x_hat_right = self.decoder_right3(l_right)
+            l_left, l_right = self.sam3(l_left, l_right)
+            x_hat_left = self.decoder_left3(l_left)
+            x_hat_right = self.decoder_right3(l_right)
 
         return torch.clamp(x_hat_left, 0, 1), torch.clamp(x_hat_right, 0, 1)
 
@@ -157,12 +158,12 @@ class Decoder:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--image_filename', type=str,
+    parser.add_argument('--image_filename', type=str, required=True,
                         help='Compressed image file')
     parser.add_argument('--output_left', type=str, help='output filename left', default='left')
     parser.add_argument('--output_right', type=str, help='output filename left', default='right')
     parser.add_argument(
-        '--model', type=str, help='A trained pytorch compression model.', default='model.pt')
+        '--model', type=str, help='A trained pytorch compression model.', required=True)
     parser.add_argument("--gpu", action='store_true', help="Use gpu?")
     args = parser.parse_args()
 
