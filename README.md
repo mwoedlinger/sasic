@@ -1,6 +1,8 @@
 # SASIC
 Official code of our CVPR paper *"SASIC: Stereo Image Compression with Latent Shifts and Stereo Attention"* by Matthias Wödlinger, Jan Kotera, Jan Xu, Robert Sablatnig
 
+Consider checking out our new (and improved) model: 🔥[ECSIC](https://github.com/mwoedlinger/ecsic)🔥
+
 ## Installation
 
 Install the necessary packages from the `requirements.txt` file with pip:
